@@ -15,6 +15,8 @@ function sendTrainDataToPebble() {
   var nextCommercialStationName = '';
   var arrivalTime = '';
   var departureTime = '';
+  var arrivalDelay = -999;
+  var departureDelay = -999;
   
   if (storedTrainPath.currentStation && storedTrainPath.locations.length > 0) {
     var currentIdx = storedTrainPath.currentStation.id || 0;
@@ -36,8 +38,8 @@ function sendTrainDataToPebble() {
     // Get arrival/departure times and delays for current station
     arrivalTime = storedTrainPath.currentStation.arrival || '';
     departureTime = storedTrainPath.currentStation.departure || '';
-    var arrivalDelay = storedTrainPath.currentStation.arrivalDelay != null ? storedTrainPath.currentStation.arrivalDelay : -999;
-    var departureDelay = storedTrainPath.currentStation.departureDelay != null ? storedTrainPath.currentStation.departureDelay : -999;
+    arrivalDelay = storedTrainPath.currentStation.arrivalDelay != null ? storedTrainPath.currentStation.arrivalDelay : -999;
+    departureDelay = storedTrainPath.currentStation.departureDelay != null ? storedTrainPath.currentStation.departureDelay : -999;
   }
   
   // Use configured commercial train number if available, otherwise use train number
@@ -72,12 +74,27 @@ function sendTrainDataToPebble() {
   }
 
   // Add arrival/departure delays
-  message[messageKeys.arrivalDelay] = arrivalDelay;
-  message[messageKeys.departureDelay] = departureDelay;
+  console.log('messageKeys object: ' + JSON.stringify(messageKeys));
+  console.log('arrivalDelay key value: ' + messageKeys.arrivalDelay);
+  console.log('departureDelay key value: ' + messageKeys.departureDelay);
+  console.log('Sending delays - arrivalDelay key: ' + messageKeys.arrivalDelay + ', value: ' + arrivalDelay);
+  console.log('Sending delays - departureDelay key: ' + messageKeys.departureDelay + ', value: ' + departureDelay);
+  if (messageKeys.arrivalDelay !== undefined) {
+    message[messageKeys.arrivalDelay] = arrivalDelay;
+  } else {
+    console.log('ERROR: messageKeys.arrivalDelay is undefined!');
+  }
+  if (messageKeys.departureDelay !== undefined) {
+    message[messageKeys.departureDelay] = departureDelay;
+  } else {
+    console.log('ERROR: messageKeys.departureDelay is undefined!');
+  }
 
   // Add next commercial stop data if available
   var nextStationArrival = '';
   var nextStationDeparture = '';
+  var nextStationArrivalDelay = -999;
+  var nextStationDepartureDelay = -999;
   if (storedTrainPath.currentStation && storedTrainPath.locations.length > 0) {
     var currentIdx = storedTrainPath.currentStation.id || 0;
 
@@ -88,6 +105,8 @@ function sendTrainDataToPebble() {
         message[messageKeys.nextCommercialStopName] = loc.name;
         nextStationArrival = loc.arrival || '';
         nextStationDeparture = loc.departure || '';
+        nextStationArrivalDelay = loc.arrivalDelay != null ? loc.arrivalDelay : -999;
+        nextStationDepartureDelay = loc.departureDelay != null ? loc.departureDelay : -999;
         break;
       }
     }
@@ -99,6 +118,19 @@ function sendTrainDataToPebble() {
   }
   if (nextStationDeparture) {
     message[messageKeys.nextStationDeparture] = nextStationDeparture;
+  }
+  // Add next station delays
+  console.log('Next station delays - arrivalDelay key: ' + messageKeys.nextStationArrivalDelay + ', value: ' + nextStationArrivalDelay);
+  console.log('Next station delays - departureDelay key: ' + messageKeys.nextStationDepartureDelay + ', value: ' + nextStationDepartureDelay);
+  if (messageKeys.nextStationArrivalDelay !== undefined) {
+    message[messageKeys.nextStationArrivalDelay] = nextStationArrivalDelay;
+  } else {
+    console.log('ERROR: messageKeys.nextStationArrivalDelay is undefined!');
+  }
+  if (messageKeys.nextStationDepartureDelay !== undefined) {
+    message[messageKeys.nextStationDepartureDelay] = nextStationDepartureDelay;
+  } else {
+    console.log('ERROR: messageKeys.nextStationDepartureDelay is undefined!');
   }
 
   Pebble.sendAppMessage(message, 

@@ -25,5 +25,7 @@
   "nextStationDeparture": 23,
   "updateInterval": 24,
   "arrivalDelay": 25,
-  "departureDelay": 26
+  "departureDelay": 26,
+  "nextStationArrivalDelay": 27,
+  "nextStationDepartureDelay": 28
 }

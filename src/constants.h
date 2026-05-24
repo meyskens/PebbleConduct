@@ -34,7 +34,9 @@ enum {
   KEY_NEXT_STATION_DEPARTURE = 23,
   KEY_UPDATE_INTERVAL = 24,
   KEY_ARRIVAL_DELAY = 25,
-  KEY_DEPARTURE_DELAY = 26
+  KEY_DEPARTURE_DELAY = 26,
+  KEY_NEXT_STATION_ARRIVAL_DELAY = 27,
+  KEY_NEXT_STATION_DEPARTURE_DELAY = 28
 };
 
 // Maximum timetable entries (reduced for aplite memory constraints)

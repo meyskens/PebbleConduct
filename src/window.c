@@ -110,7 +110,7 @@ void main_window_load(Window *window) {
 
   // Next commercial stop layer (shows arrival/departure times for next commercial stop)
   s_next_commercial_stop_layer = text_layer_create(
-    GRect(5, 134, bounds.size.w - 10, 28));
+    GRect(5, 136, bounds.size.w - 10, 16));
   text_layer_set_background_color(s_next_commercial_stop_layer, GColorClear);
   text_layer_set_text_color(s_next_commercial_stop_layer, GColorBlack);
   text_layer_set_font(s_next_commercial_stop_layer, fonts_get_system_font(FONT_KEY_GOTHIC_14));

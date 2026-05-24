@@ -22,6 +22,8 @@ int s_departure_delay = 0;
 char s_next_commercial_stop_name[24] = "";
 char s_next_station_arrival[8] = "";
 char s_next_station_departure[8] = "";
+int s_next_station_arrival_delay = DELAY_NO_INFO;
+int s_next_station_departure_delay = DELAY_NO_INFO;
 
 // Current station index in timetable
 int s_current_station_index = 0;

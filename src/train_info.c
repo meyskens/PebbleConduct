@@ -115,20 +115,49 @@ void update_train_info(void) {
   commercial_frame.origin.y = y_offset + 16;  // Below the station name
   layer_set_frame(text_layer_get_layer(s_next_commercial_stop_layer), commercial_frame);
 
-  // Show arrival/departure times for next station with labels
+  // Show arrival/departure times for next station with labels and delays
   static char next_times_buffer[64];
   bool has_next_arrival = strlen(s_next_station_arrival) > 0;
   bool has_next_departure = strlen(s_next_station_departure) > 0;
+  bool has_next_arrival_delay = (s_next_station_arrival_delay != DELAY_NO_INFO);
+  bool has_next_departure_delay = (s_next_station_departure_delay != DELAY_NO_INFO);
+
+  APP_LOG(APP_LOG_LEVEL_INFO, "Next station delays: arr=%d, dep=%d (DELAY_NO_INFO=%d)",
+          s_next_station_arrival_delay, s_next_station_departure_delay, DELAY_NO_INFO);
+  APP_LOG(APP_LOG_LEVEL_INFO, "Next station times: arr=%s, dep=%s", s_next_station_arrival, s_next_station_departure);
 
   if (has_next_arrival && has_next_departure) {
-    snprintf(next_times_buffer, sizeof(next_times_buffer), "Arr: %s  Dep: %s",
-             s_next_station_arrival, s_next_station_departure);
+    if (has_next_arrival_delay && has_next_departure_delay) {
+      snprintf(next_times_buffer, sizeof(next_times_buffer), "%s (+%d)->%s (+%d)",
+               s_next_station_arrival, s_next_station_arrival_delay,
+               s_next_station_departure, s_next_station_departure_delay);
+    } else if (has_next_arrival_delay) {
+      snprintf(next_times_buffer, sizeof(next_times_buffer), "%s (+%d)->%s",
+               s_next_station_arrival, s_next_station_arrival_delay, s_next_station_departure);
+    } else if (has_next_departure_delay) {
+      snprintf(next_times_buffer, sizeof(next_times_buffer), "%s->%s(+%d)",
+               s_next_station_arrival, s_next_station_departure, s_next_station_departure_delay);
+    } else {
+      snprintf(next_times_buffer, sizeof(next_times_buffer), "%s->%s",
+               s_next_station_arrival, s_next_station_departure);
+    }
   } else if (has_next_departure) {
-    snprintf(next_times_buffer, sizeof(next_times_buffer), "Dep: %s", s_next_station_departure);
+    if (has_next_departure_delay) {
+      snprintf(next_times_buffer, sizeof(next_times_buffer), "Dep: %s (+%d)",
+               s_next_station_departure, s_next_station_departure_delay);
+    } else {
+      snprintf(next_times_buffer, sizeof(next_times_buffer), "Dep: %s", s_next_station_departure);
+    }
   } else if (has_next_arrival) {
-    snprintf(next_times_buffer, sizeof(next_times_buffer), "Arr: %s", s_next_station_arrival);
+    if (has_next_arrival_delay) {
+      snprintf(next_times_buffer, sizeof(next_times_buffer), "Arr: %s (+%d)",
+               s_next_station_arrival, s_next_station_arrival_delay);
+    } else {
+      snprintf(next_times_buffer, sizeof(next_times_buffer), "Arr: %s", s_next_station_arrival);
+    }
   } else {
     next_times_buffer[0] = '\0';
   }
+  APP_LOG(APP_LOG_LEVEL_INFO, "Next station text: '%s'", next_times_buffer);
   text_layer_set_text(s_next_commercial_stop_layer, next_times_buffer);
 }

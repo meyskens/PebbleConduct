@@ -34,6 +34,8 @@ extern int s_departure_delay;
 extern char s_next_commercial_stop_name[24];
 extern char s_next_station_arrival[8];
 extern char s_next_station_departure[8];
+extern int s_next_station_arrival_delay;
+extern int s_next_station_departure_delay;
 
 // Current station index in timetable
 extern int s_current_station_index;
