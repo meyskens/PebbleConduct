@@ -17,7 +17,7 @@ module.exports = [
         "type": "select",
         "messageKey": "dataSource",
         "label": "Data Source",
-        "defaultValue": "tcs",
+        "defaultValue": "whereisthees",
         "options": [
           { "label": "TCS RailDesk", "value": "tcs" },
           { "label": "whereisthe.es", "value": "whereisthees" },
@@ -29,13 +29,13 @@ module.exports = [
         "type": "input",
         "messageKey": "trainNumber",
         "label": "Train Number (Path UUID for TCS)",
-        "defaultValue": ""
+        "defaultValue": "452"
       },
       {
         "type": "input",
         "messageKey": "commercialTrainNumber",
         "label": "Commercial Train Number to display",
-        "defaultValue": ""
+        "defaultValue": "ES452"
       },
       {
         "type": "input",

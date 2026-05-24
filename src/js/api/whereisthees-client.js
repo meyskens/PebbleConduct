@@ -118,8 +118,8 @@ function fetchFromWhereIsTheEs() {
     return;
   }
 
-  // Use configured date or today's date
-  var date = state.appSettings.date || helpers.getTodayDate();
+  // Use configured date or 'next' if not set
+  var date = state.appSettings.date || 'next';
 
   // whereisthe.es API endpoint: /api/v1/timetable/{date}/{trainNumber}
   var url = 'https://whereisthe.es/api/v1/timetable/' + date + '/' + state.appSettings.trainNumber;
