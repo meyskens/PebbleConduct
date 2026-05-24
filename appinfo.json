@@ -3,7 +3,7 @@
   "shortName": "PebbleConduct",
   "longName": "PebbleConduct - Pebble App For Train Conductors",
   "companyName": "Maartje Eyskens",
-  "versionLabel": "1.0.0",
+  "versionLabel": "1.0.1",
   "sdkVersion": "3",
   "targetPlatforms": ["aplite", "basalt", "chalk", "diorite", "emery"],
   "watchapp": {
@@ -52,13 +52,17 @@
       },
       {
         "type": "bitmap",
-        "name": "ICON_SMALL",
-        "file": "images/pebbleconduct-small.png"
+        "name": "MENU_ICON",
+        "file": "images/menu-icon.png",
+        "menuIcon": true,
+        "memoryFormat": "1Bit",
+        "targetPlatforms": ["aplite", "diorite"]
       },
       {
         "type": "bitmap",
-        "name": "ICON_LARGE",
-        "file": "images/pebbleconduct-large.png"
+        "name": "MENU_ICON",
+        "file": "images/menu-icon.png",
+        "targetPlatforms": ["basalt", "chalk", "emery"]
       }
     ]
   },

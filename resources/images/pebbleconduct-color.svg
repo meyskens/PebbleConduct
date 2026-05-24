@@ -6,7 +6,7 @@
    fill="none"
    version="1.1"
    id="svg3"
-   sodipodi:docname="pebbleconduct.svg"
+   sodipodi:docname="pebbleconduct-color.svg"
    xml:space="preserve"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -30,7 +30,13 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg3" /><path
+     inkscape:current-layer="svg3" /><rect
+     style="fill:#ffdd55;stroke:none;stroke-width:0.716765;stroke-dasharray:none"
+     id="rect1"
+     width="26.377851"
+     height="25.166578"
+     x="-0.58594286"
+     y="-0.002463215" /><path
      d="M1 15V9L3 7V2H9V7L11 9V15L9 17V23H3V17L1 15Z"
      fill="white"
      id="path2" /><path
