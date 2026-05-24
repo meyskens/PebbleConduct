@@ -1,0 +1,2300 @@
+{
+  "currentStation": {
+    "id": 0,
+    "name": "Brussel-Zuid / Bruxelles-Midi",
+    "arrival": "05:52",
+    "departure": "06:00",
+    "arrivalDelay": 16,
+    "departureDelay": null
+  },
+  "locations": [
+    {
+      "name": "Wustermark Rbf",
+      "arrival": "",
+      "departure": "16:15",
+      "arrivalDelay": null,
+      "departureDelay": 93,
+      "commercialStop": true
+    },
+    {
+      "name": "Wustermark Awf",
+      "arrival": "",
+      "departure": "16:19",
+      "arrivalDelay": null,
+      "departureDelay": 95,
+      "commercialStop": false
+    },
+    {
+      "name": "Brieselang Hasselberg",
+      "arrival": "",
+      "departure": "16:21",
+      "arrivalDelay": null,
+      "departureDelay": 95,
+      "commercialStop": false
+    },
+    {
+      "name": "Falkenhagen (b Nauen)",
+      "arrival": "",
+      "departure": "16:22",
+      "arrivalDelay": null,
+      "departureDelay": 96,
+      "commercialStop": false
+    },
+    {
+      "name": "Schönwalde (b Nauen)",
+      "arrival": "",
+      "departure": "16:26",
+      "arrivalDelay": null,
+      "departureDelay": 96,
+      "commercialStop": false
+    },
+    {
+      "name": "Hennigsdorf Nord (Hdw)",
+      "arrival": "",
+      "departure": "16:30",
+      "arrivalDelay": null,
+      "departureDelay": 95,
+      "commercialStop": false
+    },
+    {
+      "name": "Hennigsdorf Nord (Hdo)",
+      "arrival": "",
+      "departure": "16:30",
+      "arrivalDelay": null,
+      "departureDelay": 96,
+      "commercialStop": false
+    },
+    {
+      "name": "Hohen Neuendorf West",
+      "arrival": "",
+      "departure": "16:32",
+      "arrivalDelay": null,
+      "departureDelay": 96,
+      "commercialStop": false
+    },
+    {
+      "name": "Bergfelde Ost",
+      "arrival": "",
+      "departure": "16:33",
+      "arrivalDelay": null,
+      "departureDelay": 96,
+      "commercialStop": false
+    },
+    {
+      "name": "Schönfließ West",
+      "arrival": "",
+      "departure": "16:34",
+      "arrivalDelay": null,
+      "departureDelay": 98,
+      "commercialStop": false
+    },
+    {
+      "name": "Schönfließ",
+      "arrival": "16:36",
+      "departure": "16:44",
+      "arrivalDelay": 98,
+      "departureDelay": 90,
+      "commercialStop": true
+    },
+    {
+      "name": "Berlin-Karow West BE/BB 6009",
+      "arrival": "",
+      "departure": "16:48",
+      "arrivalDelay": null,
+      "departureDelay": 89,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin-Karow West",
+      "arrival": "",
+      "departure": "16:50",
+      "arrivalDelay": null,
+      "departureDelay": 89,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin-Karow Ost",
+      "arrival": "",
+      "departure": "16:51",
+      "arrivalDelay": null,
+      "departureDelay": 89,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin-Hohenschönhausen",
+      "arrival": "",
+      "departure": "16:53",
+      "arrivalDelay": null,
+      "departureDelay": 90,
+      "commercialStop": false
+    },
+    {
+      "name": "Biesdorfer Kreuz Nord",
+      "arrival": "16:56",
+      "departure": "17:06",
+      "arrivalDelay": 90,
+      "departureDelay": 79,
+      "commercialStop": true
+    },
+    {
+      "name": "Biesdorfer Kreuz Süd-West",
+      "arrival": "",
+      "departure": "17:09",
+      "arrivalDelay": null,
+      "departureDelay": 79,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin-Rummelsburg (Rgbv)",
+      "arrival": "",
+      "departure": "17:12",
+      "arrivalDelay": null,
+      "departureDelay": 80,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin Ostkreuz (Stadtbahn-F)",
+      "arrival": "",
+      "departure": "17:13",
+      "arrivalDelay": null,
+      "departureDelay": 84,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin Warschauer Straße (F-Bahn) Bft",
+      "arrival": "",
+      "departure": "17:14",
+      "arrivalDelay": null,
+      "departureDelay": 84,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin Ostbahnhof",
+      "arrival": "17:16",
+      "departure": "17:18",
+      "arrivalDelay": 85,
+      "departureDelay": 85,
+      "commercialStop": true
+    },
+    {
+      "name": "Berlin Alexanderplatz",
+      "arrival": "",
+      "departure": "17:21",
+      "arrivalDelay": null,
+      "departureDelay": 85,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin Friedrichstraße",
+      "arrival": "",
+      "departure": "17:23",
+      "arrivalDelay": null,
+      "departureDelay": 85,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin Hauptbahnhof-Lehrter Bf (Stadtb)",
+      "arrival": "17:27",
+      "departure": "17:33",
+      "arrivalDelay": 83,
+      "departureDelay": 88,
+      "commercialStop": true
+    },
+    {
+      "name": "Berlin Zoologischer Garten",
+      "arrival": "",
+      "departure": "17:38",
+      "arrivalDelay": null,
+      "departureDelay": 87,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin-Charlottenburg",
+      "arrival": "",
+      "departure": "17:40",
+      "arrivalDelay": null,
+      "departureDelay": 88,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin-Spandau Ost",
+      "arrival": "",
+      "departure": "17:44",
+      "arrivalDelay": null,
+      "departureDelay": 89,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin-Spandau Mitte",
+      "arrival": "",
+      "departure": "17:45",
+      "arrivalDelay": null,
+      "departureDelay": 88,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin-Spandau",
+      "arrival": "17:46",
+      "departure": "17:49",
+      "arrivalDelay": 88,
+      "departureDelay": 85,
+      "commercialStop": true
+    },
+    {
+      "name": "Berlin-Spandau West",
+      "arrival": "",
+      "departure": "17:50",
+      "arrivalDelay": null,
+      "departureDelay": 84,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin Nennhauser Damm",
+      "arrival": "",
+      "departure": "17:51",
+      "arrivalDelay": null,
+      "departureDelay": 85,
+      "commercialStop": false
+    },
+    {
+      "name": "Berlin-Staaken BE/BB 6185",
+      "arrival": "",
+      "departure": "17:52",
+      "arrivalDelay": null,
+      "departureDelay": 85,
+      "commercialStop": false
+    },
+    {
+      "name": "Wustermark",
+      "arrival": "",
+      "departure": "17:57",
+      "arrivalDelay": null,
+      "departureDelay": 84,
+      "commercialStop": false
+    },
+    {
+      "name": "Wustermark Awn",
+      "arrival": "",
+      "departure": "17:58",
+      "arrivalDelay": null,
+      "departureDelay": 84,
+      "commercialStop": false
+    },
+    {
+      "name": "Ribbeck",
+      "arrival": "",
+      "departure": "18:05",
+      "arrivalDelay": null,
+      "departureDelay": 84,
+      "commercialStop": false
+    },
+    {
+      "name": "Buschow",
+      "arrival": "",
+      "departure": "18:06",
+      "arrivalDelay": null,
+      "departureDelay": 84,
+      "commercialStop": false
+    },
+    {
+      "name": "Nennhausen",
+      "arrival": "",
+      "departure": "18:09",
+      "arrivalDelay": null,
+      "departureDelay": 84,
+      "commercialStop": false
+    },
+    {
+      "name": "Bamme",
+      "arrival": "",
+      "departure": "18:11",
+      "arrivalDelay": null,
+      "departureDelay": 84,
+      "commercialStop": false
+    },
+    {
+      "name": "Rathenow",
+      "arrival": "",
+      "departure": "18:13",
+      "arrivalDelay": null,
+      "departureDelay": 86,
+      "commercialStop": false
+    },
+    {
+      "name": "Rathenow BB/ST",
+      "arrival": "",
+      "departure": "18:18",
+      "arrivalDelay": null,
+      "departureDelay": 87,
+      "commercialStop": false
+    },
+    {
+      "name": "Schönhausen HGV",
+      "arrival": "",
+      "departure": "18:22",
+      "arrivalDelay": null,
+      "departureDelay": 87,
+      "commercialStop": false
+    },
+    {
+      "name": "Staffelde",
+      "arrival": "",
+      "departure": "18:24",
+      "arrivalDelay": null,
+      "departureDelay": 87,
+      "commercialStop": false
+    },
+    {
+      "name": "Stendal",
+      "arrival": "18:28",
+      "departure": "18:31",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": true
+    },
+    {
+      "name": "Nahrstedt",
+      "arrival": "",
+      "departure": "18:36",
+      "arrivalDelay": null,
+      "departureDelay": 82,
+      "commercialStop": false
+    },
+    {
+      "name": "Gardelegen Üst",
+      "arrival": "",
+      "departure": "18:45",
+      "arrivalDelay": null,
+      "departureDelay": 81,
+      "commercialStop": false
+    },
+    {
+      "name": "Oebisfelde",
+      "arrival": "",
+      "departure": "18:58",
+      "arrivalDelay": null,
+      "departureDelay": 80,
+      "commercialStop": false
+    },
+    {
+      "name": "Oebisfelde ST/NI 6107",
+      "arrival": "",
+      "departure": "18:59",
+      "arrivalDelay": null,
+      "departureDelay": 79,
+      "commercialStop": false
+    },
+    {
+      "name": "Vorsfelde",
+      "arrival": "",
+      "departure": "19:02",
+      "arrivalDelay": null,
+      "departureDelay": 79,
+      "commercialStop": false
+    },
+    {
+      "name": "Wolfsburg Hbf",
+      "arrival": "",
+      "departure": "19:04",
+      "arrivalDelay": null,
+      "departureDelay": 79,
+      "commercialStop": false
+    },
+    {
+      "name": "Fallersleben",
+      "arrival": "",
+      "departure": "19:06",
+      "arrivalDelay": null,
+      "departureDelay": 79,
+      "commercialStop": false
+    },
+    {
+      "name": "Calberlah",
+      "arrival": "",
+      "departure": "19:09",
+      "arrivalDelay": null,
+      "departureDelay": 80,
+      "commercialStop": false
+    },
+    {
+      "name": "Gifhorn",
+      "arrival": "",
+      "departure": "19:11",
+      "arrivalDelay": null,
+      "departureDelay": 81,
+      "commercialStop": false
+    },
+    {
+      "name": "Leiferde (b Gifhorn) Üst",
+      "arrival": "",
+      "departure": "19:14",
+      "arrivalDelay": null,
+      "departureDelay": 81,
+      "commercialStop": false
+    },
+    {
+      "name": "Leiferde (b Gifhorn)",
+      "arrival": "",
+      "departure": "19:15",
+      "arrivalDelay": null,
+      "departureDelay": 80,
+      "commercialStop": false
+    },
+    {
+      "name": "Meinersen",
+      "arrival": "",
+      "departure": "19:17",
+      "arrivalDelay": null,
+      "departureDelay": 81,
+      "commercialStop": false
+    },
+    {
+      "name": "Dedenhausen",
+      "arrival": "",
+      "departure": "19:20",
+      "arrivalDelay": null,
+      "departureDelay": 80,
+      "commercialStop": false
+    },
+    {
+      "name": "Dollbergen",
+      "arrival": "",
+      "departure": "19:21",
+      "arrivalDelay": null,
+      "departureDelay": 80,
+      "commercialStop": false
+    },
+    {
+      "name": "Immensen-Arpke",
+      "arrival": "",
+      "departure": "19:24",
+      "arrivalDelay": null,
+      "departureDelay": 80,
+      "commercialStop": false
+    },
+    {
+      "name": "Lehrte",
+      "arrival": "",
+      "departure": "19:29",
+      "arrivalDelay": null,
+      "departureDelay": 79,
+      "commercialStop": false
+    },
+    {
+      "name": "Lehrte West",
+      "arrival": "19:32",
+      "departure": "20:06",
+      "arrivalDelay": 77,
+      "departureDelay": 43,
+      "commercialStop": true
+    },
+    {
+      "name": "Hannover Karl-Wiechert-Allee",
+      "arrival": "",
+      "departure": "20:12",
+      "arrivalDelay": null,
+      "departureDelay": 41,
+      "commercialStop": false
+    },
+    {
+      "name": "Hannover Hbf Pferdeturm",
+      "arrival": "",
+      "departure": "20:13",
+      "arrivalDelay": null,
+      "departureDelay": 43,
+      "commercialStop": false
+    },
+    {
+      "name": "Hannover Hbf",
+      "arrival": "",
+      "departure": "20:15",
+      "arrivalDelay": null,
+      "departureDelay": 64,
+      "commercialStop": false
+    },
+    {
+      "name": "Hannover Burg",
+      "arrival": "",
+      "departure": "20:19",
+      "arrivalDelay": null,
+      "departureDelay": 65,
+      "commercialStop": false
+    },
+    {
+      "name": "Letter (Abzw)",
+      "arrival": "",
+      "departure": "20:21",
+      "arrivalDelay": null,
+      "departureDelay": 66,
+      "commercialStop": false
+    },
+    {
+      "name": "Seelze",
+      "arrival": "",
+      "departure": "20:23",
+      "arrivalDelay": null,
+      "departureDelay": 65,
+      "commercialStop": false
+    },
+    {
+      "name": "Seelze West",
+      "arrival": "",
+      "departure": "20:23",
+      "arrivalDelay": null,
+      "departureDelay": 66,
+      "commercialStop": false
+    },
+    {
+      "name": "Dedensen-Gümmer",
+      "arrival": "",
+      "departure": "20:25",
+      "arrivalDelay": null,
+      "departureDelay": 66,
+      "commercialStop": false
+    },
+    {
+      "name": "Wunstorf",
+      "arrival": "20:28",
+      "departure": "20:45",
+      "arrivalDelay": 69,
+      "departureDelay": 51,
+      "commercialStop": true
+    },
+    {
+      "name": "Haste",
+      "arrival": "",
+      "departure": "20:49",
+      "arrivalDelay": null,
+      "departureDelay": 52,
+      "commercialStop": false
+    },
+    {
+      "name": "Rehren",
+      "arrival": "20:51",
+      "departure": "21:28",
+      "arrivalDelay": 52,
+      "departureDelay": 15,
+      "commercialStop": true
+    },
+    {
+      "name": "Lindhorst (Schaumb-Lippe)",
+      "arrival": "",
+      "departure": "21:32",
+      "arrivalDelay": null,
+      "departureDelay": 12,
+      "commercialStop": false
+    },
+    {
+      "name": "Stadthagen",
+      "arrival": "",
+      "departure": "21:36",
+      "arrivalDelay": null,
+      "departureDelay": 12,
+      "commercialStop": false
+    },
+    {
+      "name": "Kirchhorsten",
+      "arrival": "",
+      "departure": "21:39",
+      "arrivalDelay": null,
+      "departureDelay": 13,
+      "commercialStop": false
+    },
+    {
+      "name": "Bückeburg",
+      "arrival": "",
+      "departure": "21:43",
+      "arrivalDelay": null,
+      "departureDelay": 15,
+      "commercialStop": false
+    },
+    {
+      "name": "Minden (Westf) NRW/NI",
+      "arrival": "",
+      "departure": "21:48",
+      "arrivalDelay": null,
+      "departureDelay": 15,
+      "commercialStop": false
+    },
+    {
+      "name": "Minden (Westf) Gbf",
+      "arrival": "",
+      "departure": "21:50",
+      "arrivalDelay": null,
+      "departureDelay": 15,
+      "commercialStop": false
+    },
+    {
+      "name": "Minden (Westf)",
+      "arrival": "",
+      "departure": "21:51",
+      "arrivalDelay": null,
+      "departureDelay": 15,
+      "commercialStop": false
+    },
+    {
+      "name": "Porta Westfalica Hp",
+      "arrival": "",
+      "departure": "22:02",
+      "arrivalDelay": null,
+      "departureDelay": 7,
+      "commercialStop": false
+    },
+    {
+      "name": "Bad Oeynhausen Gbf Abzw",
+      "arrival": "",
+      "departure": "22:06",
+      "arrivalDelay": null,
+      "departureDelay": 7,
+      "commercialStop": false
+    },
+    {
+      "name": "Bad Oeynhausen",
+      "arrival": "",
+      "departure": "22:07",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Löhne (Westf) Pbf",
+      "arrival": "",
+      "departure": "22:15",
+      "arrivalDelay": null,
+      "departureDelay": 3,
+      "commercialStop": false
+    },
+    {
+      "name": "Löhne (Westf) Gbf",
+      "arrival": "",
+      "departure": "22:18",
+      "arrivalDelay": null,
+      "departureDelay": 3,
+      "commercialStop": false
+    },
+    {
+      "name": "Kirchlengern",
+      "arrival": "",
+      "departure": "22:21",
+      "arrivalDelay": null,
+      "departureDelay": 2,
+      "commercialStop": false
+    },
+    {
+      "name": "Bünde (Westf)",
+      "arrival": "",
+      "departure": "22:27",
+      "arrivalDelay": null,
+      "departureDelay": -1,
+      "commercialStop": false
+    },
+    {
+      "name": "Bünde Stadt Bünde",
+      "arrival": "",
+      "departure": "22:28",
+      "arrivalDelay": null,
+      "departureDelay": -1,
+      "commercialStop": false
+    },
+    {
+      "name": "Bruchmühlen NI/NRW",
+      "arrival": "",
+      "departure": "22:32",
+      "arrivalDelay": null,
+      "departureDelay": -2,
+      "commercialStop": false
+    },
+    {
+      "name": "Bruchmühlen",
+      "arrival": "",
+      "departure": "22:33",
+      "arrivalDelay": null,
+      "departureDelay": -3,
+      "commercialStop": false
+    },
+    {
+      "name": "Melle",
+      "arrival": "",
+      "departure": "22:37",
+      "arrivalDelay": null,
+      "departureDelay": -3,
+      "commercialStop": false
+    },
+    {
+      "name": "Melle Euer Heide",
+      "arrival": "",
+      "departure": "22:38",
+      "arrivalDelay": null,
+      "departureDelay": -3,
+      "commercialStop": false
+    },
+    {
+      "name": "Westerhausen (Kr Melle)",
+      "arrival": "",
+      "departure": "22:39",
+      "arrivalDelay": null,
+      "departureDelay": -2,
+      "commercialStop": false
+    },
+    {
+      "name": "Wissingen",
+      "arrival": "",
+      "departure": "22:42",
+      "arrivalDelay": null,
+      "departureDelay": -2,
+      "commercialStop": false
+    },
+    {
+      "name": "Lüstringen",
+      "arrival": "",
+      "departure": "22:45",
+      "arrivalDelay": null,
+      "departureDelay": -1,
+      "commercialStop": false
+    },
+    {
+      "name": "Osnabrück Stahlwerkskurve",
+      "arrival": "",
+      "departure": "22:47",
+      "arrivalDelay": null,
+      "departureDelay": 0,
+      "commercialStop": false
+    },
+    {
+      "name": "Osnabrück Hbf Po",
+      "arrival": "22:50",
+      "departure": "22:52",
+      "arrivalDelay": 2,
+      "departureDelay": 0,
+      "commercialStop": true
+    },
+    {
+      "name": "Hörne",
+      "arrival": "",
+      "departure": "22:55",
+      "arrivalDelay": null,
+      "departureDelay": 0,
+      "commercialStop": false
+    },
+    {
+      "name": "Hasbergen (Kr Osnabrück)",
+      "arrival": "",
+      "departure": "23:02",
+      "arrivalDelay": null,
+      "departureDelay": -4,
+      "commercialStop": false
+    },
+    {
+      "name": "Natrup-Hagen",
+      "arrival": "",
+      "departure": "23:04",
+      "arrivalDelay": null,
+      "departureDelay": -4,
+      "commercialStop": false
+    },
+    {
+      "name": "Natrup-Hagen NI/NRW",
+      "arrival": "",
+      "departure": "23:05",
+      "arrivalDelay": null,
+      "departureDelay": -4,
+      "commercialStop": false
+    },
+    {
+      "name": "Lengerich (Westf)",
+      "arrival": "23:09",
+      "departure": "23:58",
+      "arrivalDelay": -5,
+      "departureDelay": -54,
+      "commercialStop": true
+    },
+    {
+      "name": "Ringel",
+      "arrival": "",
+      "departure": "00:04",
+      "arrivalDelay": null,
+      "departureDelay": -58,
+      "commercialStop": false
+    },
+    {
+      "name": "Kattenvenne",
+      "arrival": "",
+      "departure": "00:06",
+      "arrivalDelay": null,
+      "departureDelay": -59,
+      "commercialStop": false
+    },
+    {
+      "name": "Ostbevern",
+      "arrival": "",
+      "departure": "00:10",
+      "arrivalDelay": null,
+      "departureDelay": -60,
+      "commercialStop": false
+    },
+    {
+      "name": "Westbevern",
+      "arrival": "",
+      "departure": "00:14",
+      "arrivalDelay": null,
+      "departureDelay": -62,
+      "commercialStop": false
+    },
+    {
+      "name": "Münster Ems",
+      "arrival": "",
+      "departure": "00:16",
+      "arrivalDelay": null,
+      "departureDelay": -63,
+      "commercialStop": false
+    },
+    {
+      "name": "Sudmühle",
+      "arrival": "",
+      "departure": "00:19",
+      "arrivalDelay": null,
+      "departureDelay": -63,
+      "commercialStop": false
+    },
+    {
+      "name": "Münster (Westf) Pbf",
+      "arrival": "",
+      "departure": "00:23",
+      "arrivalDelay": null,
+      "departureDelay": -14,
+      "commercialStop": false
+    },
+    {
+      "name": "Münster (Westf) Gbf",
+      "arrival": "",
+      "departure": "00:25",
+      "arrivalDelay": null,
+      "departureDelay": -8,
+      "commercialStop": false
+    },
+    {
+      "name": "Geist",
+      "arrival": "",
+      "departure": "00:27",
+      "arrivalDelay": null,
+      "departureDelay": -7,
+      "commercialStop": false
+    },
+    {
+      "name": "Mecklenbeck",
+      "arrival": "",
+      "departure": "00:29",
+      "arrivalDelay": null,
+      "departureDelay": -5,
+      "commercialStop": false
+    },
+    {
+      "name": "Münster-Albachten",
+      "arrival": "",
+      "departure": "00:32",
+      "arrivalDelay": null,
+      "departureDelay": -5,
+      "commercialStop": false
+    },
+    {
+      "name": "Bösensell",
+      "arrival": "",
+      "departure": "00:35",
+      "arrivalDelay": null,
+      "departureDelay": 2,
+      "commercialStop": false
+    },
+    {
+      "name": "Nottuln-Appelhülsen",
+      "arrival": "",
+      "departure": "00:39",
+      "arrivalDelay": null,
+      "departureDelay": 13,
+      "commercialStop": false
+    },
+    {
+      "name": "Buldern",
+      "arrival": "",
+      "departure": "00:44",
+      "arrivalDelay": null,
+      "departureDelay": 13,
+      "commercialStop": false
+    },
+    {
+      "name": "Dülmen",
+      "arrival": "",
+      "departure": "00:50",
+      "arrivalDelay": null,
+      "departureDelay": 10,
+      "commercialStop": false
+    },
+    {
+      "name": "Sythen Bbf",
+      "arrival": "",
+      "departure": "00:56",
+      "arrivalDelay": null,
+      "departureDelay": 7,
+      "commercialStop": false
+    },
+    {
+      "name": "Sythen",
+      "arrival": "",
+      "departure": "00:58",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Haltern am See",
+      "arrival": "",
+      "departure": "01:01",
+      "arrivalDelay": null,
+      "departureDelay": 5,
+      "commercialStop": false
+    },
+    {
+      "name": "Marl Lippe",
+      "arrival": "",
+      "departure": "01:04",
+      "arrivalDelay": null,
+      "departureDelay": 3,
+      "commercialStop": false
+    },
+    {
+      "name": "Marl-Sinsen",
+      "arrival": "",
+      "departure": "01:07",
+      "arrivalDelay": null,
+      "departureDelay": 3,
+      "commercialStop": false
+    },
+    {
+      "name": "Recklinghausen Hbf",
+      "arrival": "",
+      "departure": "01:12",
+      "arrivalDelay": null,
+      "departureDelay": 1,
+      "commercialStop": false
+    },
+    {
+      "name": "Recklinghausen Süd",
+      "arrival": "",
+      "departure": "01:16",
+      "arrivalDelay": null,
+      "departureDelay": 0,
+      "commercialStop": false
+    },
+    {
+      "name": "Baukau",
+      "arrival": "",
+      "departure": "01:18",
+      "arrivalDelay": null,
+      "departureDelay": 0,
+      "commercialStop": false
+    },
+    {
+      "name": "Wanne-Eickel Hbf",
+      "arrival": "",
+      "departure": "01:20",
+      "arrivalDelay": null,
+      "departureDelay": 1,
+      "commercialStop": false
+    },
+    {
+      "name": "Gelsenkirchen Hbf",
+      "arrival": "",
+      "departure": "01:24",
+      "arrivalDelay": null,
+      "departureDelay": 0,
+      "commercialStop": false
+    },
+    {
+      "name": "Essen Zollverein Nord",
+      "arrival": "",
+      "departure": "01:27",
+      "arrivalDelay": null,
+      "departureDelay": -1,
+      "commercialStop": false
+    },
+    {
+      "name": "Essen-Altenessen",
+      "arrival": "",
+      "departure": "01:29",
+      "arrivalDelay": null,
+      "departureDelay": -1,
+      "commercialStop": false
+    },
+    {
+      "name": "Essen-Bergeborbeck",
+      "arrival": "",
+      "departure": "01:31",
+      "arrivalDelay": null,
+      "departureDelay": -2,
+      "commercialStop": false
+    },
+    {
+      "name": "Essen-Dellwig",
+      "arrival": "",
+      "departure": "01:34",
+      "arrivalDelay": null,
+      "departureDelay": -2,
+      "commercialStop": false
+    },
+    {
+      "name": "Essen-Dellwig (Abzw)",
+      "arrival": "",
+      "departure": "01:34",
+      "arrivalDelay": null,
+      "departureDelay": -2,
+      "commercialStop": false
+    },
+    {
+      "name": "Oberhausen Hbf Obo",
+      "arrival": "",
+      "departure": "01:37",
+      "arrivalDelay": null,
+      "departureDelay": -3,
+      "commercialStop": false
+    },
+    {
+      "name": "Oberhausen Hbf",
+      "arrival": "",
+      "departure": "01:38",
+      "arrivalDelay": null,
+      "departureDelay": -2,
+      "commercialStop": false
+    },
+    {
+      "name": "Oberhausen Kolkmannshof",
+      "arrival": "",
+      "departure": "01:39",
+      "arrivalDelay": null,
+      "departureDelay": -1,
+      "commercialStop": false
+    },
+    {
+      "name": "Duisburg Kaiserberg",
+      "arrival": "",
+      "departure": "01:40",
+      "arrivalDelay": null,
+      "departureDelay": -1,
+      "commercialStop": false
+    },
+    {
+      "name": "Duisburg-Duissern",
+      "arrival": "",
+      "departure": "01:41",
+      "arrivalDelay": null,
+      "departureDelay": 0,
+      "commercialStop": false
+    },
+    {
+      "name": "Duisburg Hbf",
+      "arrival": "",
+      "departure": "01:42",
+      "arrivalDelay": null,
+      "departureDelay": 0,
+      "commercialStop": false
+    },
+    {
+      "name": "Duisburg-Hochfeld Süd Abzw",
+      "arrival": "",
+      "departure": "01:45",
+      "arrivalDelay": null,
+      "departureDelay": 3,
+      "commercialStop": false
+    },
+    {
+      "name": "Duisburg-Hochfeld Süd (Hp)",
+      "arrival": "",
+      "departure": "01:45",
+      "arrivalDelay": null,
+      "departureDelay": 3,
+      "commercialStop": false
+    },
+    {
+      "name": "Rheinhausen Ost",
+      "arrival": "",
+      "departure": "01:47",
+      "arrivalDelay": null,
+      "departureDelay": 3,
+      "commercialStop": false
+    },
+    {
+      "name": "Rheinhausen",
+      "arrival": "",
+      "departure": "01:48",
+      "arrivalDelay": null,
+      "departureDelay": 3,
+      "commercialStop": false
+    },
+    {
+      "name": "Duisburg-Mühlenberg",
+      "arrival": "",
+      "departure": "01:50",
+      "arrivalDelay": null,
+      "departureDelay": 3,
+      "commercialStop": false
+    },
+    {
+      "name": "Krefeld-Hohenbudberg Chempark",
+      "arrival": "",
+      "departure": "01:52",
+      "arrivalDelay": null,
+      "departureDelay": 2,
+      "commercialStop": false
+    },
+    {
+      "name": "Krefeld-Uerdingen",
+      "arrival": "",
+      "departure": "01:54",
+      "arrivalDelay": null,
+      "departureDelay": 0,
+      "commercialStop": false
+    },
+    {
+      "name": "Krefeld-Uerdingen (Hp)",
+      "arrival": "",
+      "departure": "01:56",
+      "arrivalDelay": null,
+      "departureDelay": -1,
+      "commercialStop": false
+    },
+    {
+      "name": "Krefeld-Linn",
+      "arrival": "",
+      "departure": "01:57",
+      "arrivalDelay": null,
+      "departureDelay": 0,
+      "commercialStop": false
+    },
+    {
+      "name": "Krefeld-Oppum",
+      "arrival": "",
+      "departure": "02:00",
+      "arrivalDelay": null,
+      "departureDelay": -2,
+      "commercialStop": false
+    },
+    {
+      "name": "Krefeld Hbf",
+      "arrival": "",
+      "departure": "02:07",
+      "arrivalDelay": null,
+      "departureDelay": -3,
+      "commercialStop": false
+    },
+    {
+      "name": "Krefeld Forsthaus",
+      "arrival": "",
+      "departure": "02:11",
+      "arrivalDelay": null,
+      "departureDelay": -3,
+      "commercialStop": false
+    },
+    {
+      "name": "Anrath",
+      "arrival": "",
+      "departure": "02:13",
+      "arrivalDelay": null,
+      "departureDelay": -2,
+      "commercialStop": false
+    },
+    {
+      "name": "Viersen",
+      "arrival": "",
+      "departure": "02:17",
+      "arrivalDelay": null,
+      "departureDelay": 2,
+      "commercialStop": false
+    },
+    {
+      "name": "Viersen Gbf",
+      "arrival": "",
+      "departure": "02:18",
+      "arrivalDelay": null,
+      "departureDelay": 2,
+      "commercialStop": false
+    },
+    {
+      "name": "Viersen-Helenabrunn",
+      "arrival": "",
+      "departure": "02:19",
+      "arrivalDelay": null,
+      "departureDelay": 2,
+      "commercialStop": false
+    },
+    {
+      "name": "Mönchengladbach Hbf",
+      "arrival": "",
+      "departure": "02:23",
+      "arrivalDelay": null,
+      "departureDelay": 3,
+      "commercialStop": false
+    },
+    {
+      "name": "Rheydt Pbf",
+      "arrival": "",
+      "departure": "02:26",
+      "arrivalDelay": null,
+      "departureDelay": 5,
+      "commercialStop": false
+    },
+    {
+      "name": "Rheydt Gbf",
+      "arrival": "",
+      "departure": "02:27",
+      "arrivalDelay": null,
+      "departureDelay": 5,
+      "commercialStop": false
+    },
+    {
+      "name": "Wickrath",
+      "arrival": "",
+      "departure": "02:28",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Herrath",
+      "arrival": "",
+      "departure": "02:30",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Erkelenz",
+      "arrival": "",
+      "departure": "02:32",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Baal Gbf",
+      "arrival": "",
+      "departure": "02:35",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Baal",
+      "arrival": "",
+      "departure": "02:35",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Brachelen",
+      "arrival": "",
+      "departure": "02:37",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Lindern",
+      "arrival": "",
+      "departure": "02:38",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Geilenkirchen",
+      "arrival": "",
+      "departure": "02:42",
+      "arrivalDelay": null,
+      "departureDelay": 5,
+      "commercialStop": false
+    },
+    {
+      "name": "Übach-Palenberg",
+      "arrival": "",
+      "departure": "02:44",
+      "arrivalDelay": null,
+      "departureDelay": 5,
+      "commercialStop": false
+    },
+    {
+      "name": "Herzogenrath Nievelstein",
+      "arrival": "",
+      "departure": "02:45",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Herzogenrath",
+      "arrival": "",
+      "departure": "02:47",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Kohlscheid",
+      "arrival": "",
+      "departure": "02:50",
+      "arrivalDelay": null,
+      "departureDelay": 6,
+      "commercialStop": false
+    },
+    {
+      "name": "Richterich",
+      "arrival": "",
+      "departure": "02:51",
+      "arrivalDelay": null,
+      "departureDelay": 8,
+      "commercialStop": false
+    },
+    {
+      "name": "Aachen West Gbf",
+      "arrival": "",
+      "departure": "02:53",
+      "arrivalDelay": null,
+      "departureDelay": 9,
+      "commercialStop": false
+    },
+    {
+      "name": "Aachen West Pbf",
+      "arrival": "",
+      "departure": "02:54",
+      "arrivalDelay": null,
+      "departureDelay": 10,
+      "commercialStop": false
+    },
+    {
+      "name": "Aachen Schanz",
+      "arrival": "",
+      "departure": "02:55",
+      "arrivalDelay": null,
+      "departureDelay": 11,
+      "commercialStop": false
+    },
+    {
+      "name": "Aachen Hbf",
+      "arrival": "02:57",
+      "departure": "03:24",
+      "arrivalDelay": 12,
+      "departureDelay": 16,
+      "commercialStop": true
+    },
+    {
+      "name": "Aachen Süd",
+      "arrival": "",
+      "departure": "03:26",
+      "arrivalDelay": null,
+      "departureDelay": 17,
+      "commercialStop": false
+    },
+    {
+      "name": "Aachen Süd Grenze",
+      "arrival": "03:29",
+      "departure": "03:18",
+      "arrivalDelay": 17,
+      "departureDelay": null,
+      "commercialStop": true
+    },
+    {
+      "name": "Hergenrath-Frontière",
+      "arrival": "",
+      "departure": "03:11",
+      "arrivalDelay": null,
+      "departureDelay": 36,
+      "commercialStop": false
+    },
+    {
+      "name": "Hergenrath",
+      "arrival": "",
+      "departure": "03:12",
+      "arrivalDelay": null,
+      "departureDelay": 36,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Hammerbrücke",
+      "arrival": "",
+      "departure": "03:12",
+      "arrivalDelay": null,
+      "departureDelay": 36,
+      "commercialStop": false
+    },
+    {
+      "name": "Welkenraedt",
+      "arrival": "",
+      "departure": "03:18",
+      "arrivalDelay": null,
+      "departureDelay": 36,
+      "commercialStop": false
+    },
+    {
+      "name": "Dolhain-Gileppe",
+      "arrival": "",
+      "departure": "03:21",
+      "arrivalDelay": null,
+      "departureDelay": 37,
+      "commercialStop": false
+    },
+    {
+      "name": "Dolhain-Vicinal",
+      "arrival": "",
+      "departure": "03:21",
+      "arrivalDelay": null,
+      "departureDelay": 38,
+      "commercialStop": false
+    },
+    {
+      "name": "Verviers-Paleis / Verviers-Palais",
+      "arrival": "",
+      "departure": "03:25",
+      "arrivalDelay": null,
+      "departureDelay": 38,
+      "commercialStop": false
+    },
+    {
+      "name": "Verviers-Centraal / Verviers-Central",
+      "arrival": "",
+      "departure": "03:27",
+      "arrivalDelay": null,
+      "departureDelay": 37,
+      "commercialStop": false
+    },
+    {
+      "name": "Pepinster",
+      "arrival": "",
+      "departure": "03:30",
+      "arrivalDelay": null,
+      "departureDelay": 36,
+      "commercialStop": false
+    },
+    {
+      "name": "Nessonvaux",
+      "arrival": "",
+      "departure": "03:34",
+      "arrivalDelay": null,
+      "departureDelay": 36,
+      "commercialStop": false
+    },
+    {
+      "name": "Fraipont",
+      "arrival": "",
+      "departure": "03:34",
+      "arrivalDelay": null,
+      "departureDelay": 37,
+      "commercialStop": false
+    },
+    {
+      "name": "Olne",
+      "arrival": "",
+      "departure": "03:35",
+      "arrivalDelay": null,
+      "departureDelay": 37,
+      "commercialStop": false
+    },
+    {
+      "name": "Trooz",
+      "arrival": "",
+      "departure": "03:36",
+      "arrivalDelay": null,
+      "departureDelay": 37,
+      "commercialStop": false
+    },
+    {
+      "name": "Chaudfontaine",
+      "arrival": "",
+      "departure": "03:38",
+      "arrivalDelay": null,
+      "departureDelay": 37,
+      "commercialStop": false
+    },
+    {
+      "name": "Chênée",
+      "arrival": "",
+      "departure": "03:41",
+      "arrivalDelay": null,
+      "departureDelay": 36,
+      "commercialStop": false
+    },
+    {
+      "name": "Angleur",
+      "arrival": "",
+      "departure": "03:43",
+      "arrivalDelay": null,
+      "departureDelay": 34,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Aguesses",
+      "arrival": "",
+      "departure": "03:43",
+      "arrivalDelay": null,
+      "departureDelay": 35,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Val-Benoit",
+      "arrival": "",
+      "departure": "03:44",
+      "arrivalDelay": null,
+      "departureDelay": 35,
+      "commercialStop": false
+    },
+    {
+      "name": "Luik-Guillemins / Liège-Guillemins",
+      "arrival": "03:46",
+      "departure": "04:00",
+      "arrivalDelay": 35,
+      "departureDelay": 24,
+      "commercialStop": true
+    },
+    {
+      "name": "Luik-Carré / Liège-Carré",
+      "arrival": "",
+      "departure": "04:03",
+      "arrivalDelay": null,
+      "departureDelay": 25,
+      "commercialStop": false
+    },
+    {
+      "name": "Luik-Sint-Lambertus / Liège-Saint-Lambert",
+      "arrival": "",
+      "departure": "04:05",
+      "arrivalDelay": null,
+      "departureDelay": 24,
+      "commercialStop": false
+    },
+    {
+      "name": "Herstal",
+      "arrival": "",
+      "departure": "04:09",
+      "arrivalDelay": null,
+      "departureDelay": 25,
+      "commercialStop": false
+    },
+    {
+      "name": "Milmort",
+      "arrival": "",
+      "departure": "04:12",
+      "arrivalDelay": null,
+      "departureDelay": 26,
+      "commercialStop": false
+    },
+    {
+      "name": "Liers",
+      "arrival": "",
+      "departure": "04:15",
+      "arrivalDelay": null,
+      "departureDelay": 24,
+      "commercialStop": false
+    },
+    {
+      "name": "Glaaien / Glons",
+      "arrival": "",
+      "departure": "04:20",
+      "arrivalDelay": null,
+      "departureDelay": 24,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Glons",
+      "arrival": "",
+      "departure": "04:21",
+      "arrivalDelay": null,
+      "departureDelay": 24,
+      "commercialStop": false
+    },
+    {
+      "name": "Grens Wallonië-Vlaanderen L34 / Front. Wallonie-Flandre L34",
+      "arrival": "",
+      "departure": "04:21",
+      "arrivalDelay": null,
+      "departureDelay": 25,
+      "commercialStop": false
+    },
+    {
+      "name": "Verb.Hessenatie-Autotransport",
+      "arrival": "",
+      "departure": "04:24",
+      "arrivalDelay": null,
+      "departureDelay": 24,
+      "commercialStop": false
+    },
+    {
+      "name": "Tongeren / Tongres",
+      "arrival": "",
+      "departure": "04:25",
+      "arrivalDelay": null,
+      "departureDelay": 24,
+      "commercialStop": false
+    },
+    {
+      "name": "Bilzen",
+      "arrival": "",
+      "departure": "04:31",
+      "arrivalDelay": null,
+      "departureDelay": 25,
+      "commercialStop": false
+    },
+    {
+      "name": "Bilzen-Wijkspoor",
+      "arrival": "",
+      "departure": "04:32",
+      "arrivalDelay": null,
+      "departureDelay": 25,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Rooierweg",
+      "arrival": "",
+      "departure": "04:33",
+      "arrivalDelay": null,
+      "departureDelay": 25,
+      "commercialStop": false
+    },
+    {
+      "name": "Beverst",
+      "arrival": "",
+      "departure": "04:34",
+      "arrivalDelay": null,
+      "departureDelay": 25,
+      "commercialStop": false
+    },
+    {
+      "name": "Diepenbeek",
+      "arrival": "",
+      "departure": "04:38",
+      "arrivalDelay": null,
+      "departureDelay": 27,
+      "commercialStop": false
+    },
+    {
+      "name": "Hasselt",
+      "arrival": "04:44",
+      "departure": "04:54",
+      "arrivalDelay": 32,
+      "departureDelay": 22,
+      "commercialStop": true
+    },
+    {
+      "name": "Hasselt-Aflos L.35",
+      "arrival": "",
+      "departure": "04:56",
+      "arrivalDelay": null,
+      "departureDelay": 23,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.West Driehoek Hasselt",
+      "arrival": "",
+      "departure": "04:57",
+      "arrivalDelay": null,
+      "departureDelay": 23,
+      "commercialStop": false
+    },
+    {
+      "name": "Schulen-Sas",
+      "arrival": "",
+      "departure": "05:01",
+      "arrivalDelay": null,
+      "departureDelay": 22,
+      "commercialStop": false
+    },
+    {
+      "name": "Schulen",
+      "arrival": "",
+      "departure": "05:01",
+      "arrivalDelay": null,
+      "departureDelay": 22,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Diest",
+      "arrival": "",
+      "departure": "05:07",
+      "arrivalDelay": null,
+      "departureDelay": 21,
+      "commercialStop": false
+    },
+    {
+      "name": "Diest",
+      "arrival": "",
+      "departure": "05:07",
+      "arrivalDelay": null,
+      "departureDelay": 21,
+      "commercialStop": false
+    },
+    {
+      "name": "Zichem",
+      "arrival": "",
+      "departure": "05:09",
+      "arrivalDelay": null,
+      "departureDelay": 22,
+      "commercialStop": false
+    },
+    {
+      "name": "Testelt",
+      "arrival": "",
+      "departure": "05:11",
+      "arrivalDelay": null,
+      "departureDelay": 21,
+      "commercialStop": false
+    },
+    {
+      "name": "Langdorp",
+      "arrival": "",
+      "departure": "05:14",
+      "arrivalDelay": null,
+      "departureDelay": 20,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Oost Driehoek Aarschot",
+      "arrival": "",
+      "departure": "05:15",
+      "arrivalDelay": null,
+      "departureDelay": 20,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Zuid Driehoek Aarschot",
+      "arrival": "",
+      "departure": "05:16",
+      "arrivalDelay": null,
+      "departureDelay": 20,
+      "commercialStop": false
+    },
+    {
+      "name": "Aarschot",
+      "arrival": "",
+      "departure": "05:17",
+      "arrivalDelay": null,
+      "departureDelay": 20,
+      "commercialStop": false
+    },
+    {
+      "name": "Wezemaal",
+      "arrival": "",
+      "departure": "05:21",
+      "arrivalDelay": null,
+      "departureDelay": 19,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Holsbeek",
+      "arrival": "",
+      "departure": "05:25",
+      "arrivalDelay": null,
+      "departureDelay": 19,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Wilsele",
+      "arrival": "",
+      "departure": "05:25",
+      "arrivalDelay": null,
+      "departureDelay": 20,
+      "commercialStop": false
+    },
+    {
+      "name": "Herent",
+      "arrival": "",
+      "departure": "05:27",
+      "arrivalDelay": null,
+      "departureDelay": 21,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Herent",
+      "arrival": "",
+      "departure": "05:27",
+      "arrivalDelay": null,
+      "departureDelay": 22,
+      "commercialStop": false
+    },
+    {
+      "name": "Veltem",
+      "arrival": "",
+      "departure": "05:28",
+      "arrivalDelay": null,
+      "departureDelay": 22,
+      "commercialStop": false
+    },
+    {
+      "name": "Erps-Kwerps",
+      "arrival": "",
+      "departure": "05:30",
+      "arrivalDelay": null,
+      "departureDelay": 21,
+      "commercialStop": false
+    },
+    {
+      "name": "Kortenberg",
+      "arrival": "",
+      "departure": "05:32",
+      "arrivalDelay": null,
+      "departureDelay": 20,
+      "commercialStop": false
+    },
+    {
+      "name": "Nossegem-Rooster C/D",
+      "arrival": "",
+      "departure": "05:33",
+      "arrivalDelay": null,
+      "departureDelay": 20,
+      "commercialStop": false
+    },
+    {
+      "name": "Nossegem",
+      "arrival": "",
+      "departure": "05:34",
+      "arrivalDelay": null,
+      "departureDelay": 19,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Zaventem",
+      "arrival": "",
+      "departure": "05:35",
+      "arrivalDelay": null,
+      "departureDelay": 19,
+      "commercialStop": false
+    },
+    {
+      "name": "Zaventem",
+      "arrival": "",
+      "departure": "05:35",
+      "arrivalDelay": null,
+      "departureDelay": 19,
+      "commercialStop": false
+    },
+    {
+      "name": "Zaventem-Rooster P/Q",
+      "arrival": "",
+      "departure": "05:36",
+      "arrivalDelay": null,
+      "departureDelay": 18,
+      "commercialStop": false
+    },
+    {
+      "name": "Diegem",
+      "arrival": "",
+      "departure": "05:37",
+      "arrivalDelay": null,
+      "departureDelay": 18,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Diegem",
+      "arrival": "",
+      "departure": "05:37",
+      "arrivalDelay": null,
+      "departureDelay": 19,
+      "commercialStop": false
+    },
+    {
+      "name": "Grens Brussel-Vlaanderen L36 / Front. Bruxelles-Flandre L36",
+      "arrival": "",
+      "departure": "05:37",
+      "arrivalDelay": null,
+      "departureDelay": 19,
+      "commercialStop": false
+    },
+    {
+      "name": "Haren-Zuid / Haren-Sud",
+      "arrival": "",
+      "departure": "05:38",
+      "arrivalDelay": null,
+      "departureDelay": 19,
+      "commercialStop": false
+    },
+    {
+      "name": "Schaarbeek / Schaerbeek",
+      "arrival": "",
+      "departure": "05:41",
+      "arrivalDelay": null,
+      "departureDelay": 17,
+      "commercialStop": false
+    },
+    {
+      "name": "Brussel-Noord-Rooster F / Bruxelles-Nord-Gril F",
+      "arrival": "",
+      "departure": "05:43",
+      "arrivalDelay": null,
+      "departureDelay": 16,
+      "commercialStop": false
+    },
+    {
+      "name": "Brussel-Noord / Bruxelles-Nord",
+      "arrival": "",
+      "departure": "05:45",
+      "arrivalDelay": null,
+      "departureDelay": 15,
+      "commercialStop": false
+    },
+    {
+      "name": "Brussel-Congres / Bruxelles-Congrès",
+      "arrival": "",
+      "departure": "05:47",
+      "arrivalDelay": null,
+      "departureDelay": 15,
+      "commercialStop": false
+    },
+    {
+      "name": "Brussel-Centraal / Bruxelles-Central",
+      "arrival": "",
+      "departure": "05:49",
+      "arrivalDelay": null,
+      "departureDelay": 14,
+      "commercialStop": false
+    },
+    {
+      "name": "Brussel-Kapellekerk / Bruxelles-Chapelle",
+      "arrival": "",
+      "departure": "05:50",
+      "arrivalDelay": null,
+      "departureDelay": 14,
+      "commercialStop": false
+    },
+    {
+      "name": "Brussel-Zuid-Rooster NZV / Bruxelles-Midi-Gril JNM",
+      "arrival": "",
+      "departure": "05:50",
+      "arrivalDelay": null,
+      "departureDelay": 16,
+      "commercialStop": false
+    },
+    {
+      "name": "Brussel-Zuid / Bruxelles-Midi",
+      "arrival": "05:52",
+      "departure": "06:00",
+      "arrivalDelay": 16,
+      "departureDelay": null,
+      "commercialStop": true
+    },
+    {
+      "name": "Y.Vorst-Oost / Y.Forest-Est",
+      "arrival": "",
+      "departure": "06:02",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Vorst-Oost / Forest-Est",
+      "arrival": "",
+      "departure": "06:03",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Ukkel-Stalle / Uccle-Stalle",
+      "arrival": "",
+      "departure": "06:04",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Ukkel-Kalevoet / Uccle-Calevoet",
+      "arrival": "",
+      "departure": "06:05",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Moensberg",
+      "arrival": "",
+      "departure": "06:06",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.Linkebeek",
+      "arrival": "",
+      "departure": "06:06",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Grens Brussel-Vlaanderen L124 / Front. Bruxelles-Flandre L124",
+      "arrival": "",
+      "departure": "06:06",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Linkebeek",
+      "arrival": "",
+      "departure": "06:06",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Holleken",
+      "arrival": "",
+      "departure": "06:07",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Sint-Genesius-Rode / Rhode-Saint-Genèse",
+      "arrival": "",
+      "departure": "06:08",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "De Hoek",
+      "arrival": "",
+      "departure": "06:09",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Grens Vlaanderen-Wallonië L124 / Front. Flandre-Wallonie L124",
+      "arrival": "",
+      "departure": "06:09",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Waterloo",
+      "arrival": "",
+      "departure": "06:10",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Braine-l'Alleud",
+      "arrival": "",
+      "departure": "06:12",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Braine-Alliance",
+      "arrival": "",
+      "departure": "06:13",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Braine-Alliance-Gril C",
+      "arrival": "",
+      "departure": "06:13",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Lillois",
+      "arrival": "",
+      "departure": "06:14",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Nijvel / Nivelles",
+      "arrival": "",
+      "departure": "06:18",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Buzet",
+      "arrival": "",
+      "departure": "06:23",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Obaix-Buzet",
+      "arrival": "",
+      "departure": "06:24",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Luttre",
+      "arrival": "",
+      "departure": "06:25",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Courcelles-Motte",
+      "arrival": "",
+      "departure": "06:28",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Roux",
+      "arrival": "",
+      "departure": "06:30",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Monceau-Gril F",
+      "arrival": "",
+      "departure": "06:30",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Marchienne-au-Pont",
+      "arrival": "",
+      "departure": "06:32",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Y.La Sambre",
+      "arrival": "",
+      "departure": "06:32",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "La Sambre",
+      "arrival": "",
+      "departure": "06:35",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Marchienne-Zone",
+      "arrival": "",
+      "departure": "06:37",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Landelies",
+      "arrival": "",
+      "departure": "06:41",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Hourpes",
+      "arrival": "",
+      "departure": "06:45",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Thuin",
+      "arrival": "",
+      "departure": "06:50",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Lobbes",
+      "arrival": "",
+      "departure": "06:53",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Lobbes-Garage",
+      "arrival": "",
+      "departure": "06:56",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Fontaine-Valmont",
+      "arrival": "",
+      "departure": "07:00",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Labuissière",
+      "arrival": "",
+      "departure": "07:03",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Solre-sur-Sambre",
+      "arrival": "",
+      "departure": "07:06",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Erquelinnes-Dorp / Erquelinnes-Village",
+      "arrival": "",
+      "departure": "07:09",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Erquelinnes",
+      "arrival": "",
+      "departure": "07:11",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Erquelinnes-Frontière",
+      "arrival": "",
+      "departure": "07:12",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    },
+    {
+      "name": "Paris-Nord",
+      "arrival": "10:03",
+      "departure": "",
+      "arrivalDelay": null,
+      "departureDelay": null,
+      "commercialStop": false
+    }
+  ]
+}

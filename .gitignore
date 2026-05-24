@@ -1,0 +1,37 @@
+# Build artifacts
+build/
+.lock-waf_linux_build
+*.pbw
+
+# Node.js dependencies
+node_modules/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Waf build system
+.waf-*
+.waf3-*
+c4che/
+
+# Generated files
+*.auto.c
+*.auto.h
+*.ld.auto
+
+# Logs
+*.log
+
+# OS files
+Thumbs.db
+
+# Build artifacts
+build/
+
+# Test files
+sample.json

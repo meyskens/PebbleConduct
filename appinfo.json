@@ -1,0 +1,67 @@
+{
+  "uuid": "c0901866-f4af-4001-857c-c26cf486ae6c",
+  "shortName": "PebbleConduct",
+  "longName": "PebbleConduct - Pebble App For Train Conductors",
+  "companyName": "Maartje Eyskens",
+  "versionLabel": "1.0.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt", "chalk", "diorite", "emery"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "trainNumber": 0,
+    "stationName": 1,
+    "delayMinutes": 3,
+    "nextStation": 4,
+    "JSReady": 6,
+    "requestUpdate": 7,
+    "timetableIndex": 8,
+    "timetableName": 9,
+    "timetableArrival": 10,
+    "timetableDeparture": 11,
+    "timetableArrivalDelay": 12,
+    "timetableDepartureDelay": 13,
+    "timetableComplete": 14,
+    "currentStationIndex": 15,
+    "commercialTrainNumber": 16,
+    "arrivalTime": 17,
+    "departureTime": 18,
+    "nextPoint": 19,
+    "timetableCommercialStop": 20,
+    "nextCommercialStopName": 21,
+    "nextStationArrival": 22,
+    "nextStationDeparture": 23
+  },
+  "resources": {
+    "media": [
+      {
+        "type": "bitmap",
+        "name": "TRAIN_ICON",
+        "file": "images/train-icon.png"
+      },
+      {
+        "type": "bitmap",
+        "name": "TRAIN_SIGNAL",
+        "file": "images/train-signal.png"
+      },
+      {
+        "type": "bitmap",
+        "name": "TRAIN_STATION",
+        "file": "images/train-station.png"
+      },
+      {
+        "type": "bitmap",
+        "name": "ICON_SMALL",
+        "file": "images/pebbleconduct-small.png"
+      },
+      {
+        "type": "bitmap",
+        "name": "ICON_LARGE",
+        "file": "images/pebbleconduct-large.png"
+      }
+    ]
+  },
+  "capabilities": ["configurable"],
+  "enableMultiJS": true
+}

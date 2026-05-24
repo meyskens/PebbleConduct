@@ -1,0 +1,21 @@
+{
+  "name": "pebble-conduct",
+  "author": "Pebble Developer",
+  "version": "1.0.0",
+  "keywords": [
+    "pebble-app"
+  ],
+  "private": true,
+  "description": "A Pebble app built for train conductors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "EUPL-1.2",
+  "dependencies": {
+    "pebble-clay": "^1.0.4"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}
