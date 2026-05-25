@@ -5,7 +5,7 @@
   "companyName": "Maartje Eyskens",
   "versionLabel": "1.0.3",
   "sdkVersion": "3",
-  "targetPlatforms": ["aplite", "basalt", "chalk", "diorite", "emery", "gabbro"],
+  "targetPlatforms": ["aplite", "basalt", "chalk", "diorite", "emery", "flint", "gabbro"],
   "watchapp": {
     "watchface": false
   },
@@ -67,7 +67,7 @@
         "type": "bitmap",
         "name": "MENU_ICON",
         "file": "images/menu-icon.png",
-        "targetPlatforms": ["basalt", "chalk", "emery", "gabbro"]
+        "targetPlatforms": ["basalt", "chalk", "emery", "flint", "gabbro"]
       }
     ]
   },
