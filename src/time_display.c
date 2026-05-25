@@ -1,6 +1,7 @@
 #include "time_display.h"
 #include "data.h"
 #include "ui_manager.h"
+#include "departure_progress.h"
 
 void update_time(void) {
   time_t temp = time(NULL);
@@ -11,6 +12,9 @@ void update_time(void) {
 
   // Update display
   text_layer_set_text(s_time_layer, s_time_buffer);
+  
+  // Update departure countdown progress bar
+  departure_progress_update();
 }
 
 void tick_handler(struct tm *tick_time, TimeUnits units_changed) {

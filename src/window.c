@@ -5,6 +5,7 @@
 #include "train_info.h"
 #include "timetable.h"
 #include "animations.h"
+#include "departure_progress.h"
 
 // Main window
 Window *s_main_window;
@@ -53,22 +54,27 @@ void main_window_load(Window *window) {
   text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
   layer_add_child(s_main_page_container, text_layer_get_layer(s_time_layer));
   
-  // Light blue background layer for train info section - starts right after clock
+  // Departure countdown progress bar (between clock and station info)
+  departure_progress_init();
+  layer_set_frame(s_departure_progress_layer, GRect(0, 32, bounds.size.w, 4));
+  layer_add_child(s_main_page_container, s_departure_progress_layer);
+  
+  // Light blue background layer for train info section - starts after progress bar
   s_train_info_bg_layer = layer_create(
-    GRect(0, 30, bounds.size.w, content_bounds.size.h - 30));
+    GRect(0, 36, bounds.size.w, content_bounds.size.h - 36));
   layer_set_update_proc(s_train_info_bg_layer, train_info_bg_update_proc);
   layer_add_child(s_main_page_container, s_train_info_bg_layer);
   
   // Train icon bitmap layer (in front of train number) - vertically centered with text
   s_train_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_TRAIN_ICON);
-  s_train_icon_layer = bitmap_layer_create(GRect(5, 40, 18, 18));
+  s_train_icon_layer = bitmap_layer_create(GRect(5, 46, 18, 18));
   bitmap_layer_set_bitmap(s_train_icon_layer, s_train_icon_bitmap);
   bitmap_layer_set_compositing_mode(s_train_icon_layer, GCompOpSet);
   layer_add_child(s_main_page_container, bitmap_layer_get_layer(s_train_icon_layer));
 
   // Commercial train number layer - shifted right to make room for icon
   s_train_number_layer = text_layer_create(
-    GRect(26, 32, bounds.size.w - 31, 26));
+    GRect(26, 38, bounds.size.w - 31, 26));
   text_layer_set_background_color(s_train_number_layer, GColorClear);
   text_layer_set_text_color(s_train_number_layer, GColorBlack);
   text_layer_set_font(s_train_number_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
@@ -77,7 +83,7 @@ void main_window_load(Window *window) {
   
   // Current station layer
   s_station_layer = text_layer_create(
-    GRect(5, 56, bounds.size.w - 10, 24));
+    GRect(5, 62, bounds.size.w - 10, 24));
   text_layer_set_background_color(s_station_layer, GColorClear);
   text_layer_set_text_color(s_station_layer, GColorBlack);
   text_layer_set_font(s_station_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
@@ -86,7 +92,7 @@ void main_window_load(Window *window) {
   
   // Status layer (shows arrival/departure times + delays, can be 2 lines)
   s_status_layer = text_layer_create(
-    GRect(5, 78, bounds.size.w - 10, 40));
+    GRect(5, 84, bounds.size.w - 10, 40));
   text_layer_set_background_color(s_status_layer, GColorClear);
   text_layer_set_text_color(s_status_layer, GColorOxfordBlue);
   text_layer_set_font(s_status_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
@@ -95,13 +101,13 @@ void main_window_load(Window *window) {
   
   // Full-width background for next station section (starts above station name)
   s_next_station_bg_layer = layer_create(
-    GRect(0, 104, bounds.size.w, 74));
+    GRect(0, 110, bounds.size.w, 74));
   layer_set_update_proc(s_next_station_bg_layer, next_station_bg_update_proc);
   layer_add_child(s_main_page_container, s_next_station_bg_layer);
 
   // Next station layer (single line, black with transparent background)
   s_next_station_layer = text_layer_create(
-    GRect(5, 118, bounds.size.w - 10, 18));
+    GRect(5, 120, bounds.size.w - 10, 18));
   text_layer_set_background_color(s_next_station_layer, GColorClear);
   text_layer_set_text_color(s_next_station_layer, GColorBlack);
   text_layer_set_font(s_next_station_layer, fonts_get_system_font(FONT_KEY_GOTHIC_14));
@@ -110,7 +116,7 @@ void main_window_load(Window *window) {
 
   // Next commercial stop layer (shows arrival/departure times for next commercial stop)
   s_next_commercial_stop_layer = text_layer_create(
-    GRect(5, 136, bounds.size.w - 10, 16));
+    GRect(5, 138, bounds.size.w - 10, 16));
   text_layer_set_background_color(s_next_commercial_stop_layer, GColorClear);
   text_layer_set_text_color(s_next_commercial_stop_layer, GColorBlack);
   text_layer_set_font(s_next_commercial_stop_layer, fonts_get_system_font(FONT_KEY_GOTHIC_14));
@@ -240,6 +246,9 @@ void main_window_unload(Window *window) {
   // Destroy loading layer (not part of containers)
   text_layer_destroy(s_loading_layer);
   s_loading_layer = NULL;
+  
+  // Destroy departure progress layer
+  departure_progress_destroy();
 
   // Destroy content container (this also destroys page containers and their children)
   layer_destroy(s_content_container);

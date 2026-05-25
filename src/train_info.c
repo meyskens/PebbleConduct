@@ -84,11 +84,11 @@ void update_train_info(void) {
   
   // Position status layer
   GRect status_frame = layer_get_frame(text_layer_get_layer(s_status_layer));
-  status_frame.origin.y = 74;
+  status_frame.origin.y = 78;
   layer_set_frame(text_layer_get_layer(s_status_layer), status_frame);
   
   // Calculate Y position for next station based on status content
-  int y_offset = 78 + ((has_arrival && has_departure) ? 36 : 24);  // More space if showing both times
+  int y_offset = 82 + ((has_arrival && has_departure) ? 36 : 24);  // More space if showing both times
 
   // Position next station background layer
   GRect bg_frame = layer_get_frame(s_next_station_bg_layer);
@@ -122,10 +122,6 @@ void update_train_info(void) {
   bool has_next_arrival_delay = (s_next_station_arrival_delay != DELAY_NO_INFO);
   bool has_next_departure_delay = (s_next_station_departure_delay != DELAY_NO_INFO);
 
-  APP_LOG(APP_LOG_LEVEL_INFO, "Next station delays: arr=%d, dep=%d (DELAY_NO_INFO=%d)",
-          s_next_station_arrival_delay, s_next_station_departure_delay, DELAY_NO_INFO);
-  APP_LOG(APP_LOG_LEVEL_INFO, "Next station times: arr=%s, dep=%s", s_next_station_arrival, s_next_station_departure);
-
   if (has_next_arrival && has_next_departure) {
     if (has_next_arrival_delay && has_next_departure_delay) {
       snprintf(next_times_buffer, sizeof(next_times_buffer), "%s (+%d)->%s (+%d)",
@@ -158,6 +154,5 @@ void update_train_info(void) {
   } else {
     next_times_buffer[0] = '\0';
   }
-  APP_LOG(APP_LOG_LEVEL_INFO, "Next station text: '%s'", next_times_buffer);
   text_layer_set_text(s_next_commercial_stop_layer, next_times_buffer);
 }
