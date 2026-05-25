@@ -6,6 +6,7 @@
 #include "timetable.h"
 #include "animations.h"
 #include "departure_progress.h"
+#include "constants.h"
 
 // Main window
 Window *s_main_window;
@@ -122,9 +123,9 @@ void main_window_load(Window *window) {
   text_layer_set_text_alignment(s_train_number_layer, GTextAlignmentLeft);
   layer_add_child(s_main_page_container, text_layer_get_layer(s_train_number_layer));
   
-  // Current station layer
+  // Current station layer - with round screen padding
   s_station_layer = text_layer_create(
-    GRect(5, station_y, bounds.size.w - 10, IS_LARGE_SCREEN ? 28 : 24));
+    GRect(5 + ROUND_PADDING_SMALL, station_y, bounds.size.w - 10 - (2 * ROUND_PADDING_SMALL), IS_LARGE_SCREEN ? 28 : 24));
   text_layer_set_background_color(s_station_layer, GColorClear);
   text_layer_set_text_color(s_station_layer, GColorBlack);
   text_layer_set_font(s_station_layer, station_font);
@@ -146,18 +147,18 @@ void main_window_load(Window *window) {
   layer_set_update_proc(s_next_station_bg_layer, next_station_bg_update_proc);
   layer_add_child(s_main_page_container, s_next_station_bg_layer);
 
-  // Next station layer (single line, black with transparent background)
+  // Next station layer (single line, black with transparent background) - with round screen padding
   s_next_station_layer = text_layer_create(
-    GRect(5, next_station_y, bounds.size.w - 10, IS_LARGE_SCREEN ? 24 : 18));
+    GRect(5 + ROUND_PADDING_LARGE, next_station_y, bounds.size.w - 10 - (2 * ROUND_PADDING_LARGE), IS_LARGE_SCREEN ? 24 : 18));
   text_layer_set_background_color(s_next_station_layer, GColorClear);
   text_layer_set_text_color(s_next_station_layer, GColorBlack);
   text_layer_set_font(s_next_station_layer, next_station_font);
   text_layer_set_text_alignment(s_next_station_layer, GTextAlignmentLeft);
   layer_add_child(s_main_page_container, text_layer_get_layer(s_next_station_layer));
 
-  // Next commercial stop layer (shows arrival/departure times for next commercial stop)
+  // Next commercial stop layer (shows arrival/departure times for next commercial stop) - with round screen padding
   s_next_commercial_stop_layer = text_layer_create(
-    GRect(5, next_commercial_y, bounds.size.w - 10, IS_LARGE_SCREEN ? 24 : 16));
+    GRect(5 + ROUND_PADDING_LARGE, next_commercial_y, bounds.size.w - 10 - (2 * ROUND_PADDING_LARGE), IS_LARGE_SCREEN ? 24 : 16));
   text_layer_set_background_color(s_next_commercial_stop_layer, GColorClear);
   text_layer_set_text_color(s_next_commercial_stop_layer, GColorBlack);
   text_layer_set_font(s_next_commercial_stop_layer, next_station_font);
@@ -172,8 +173,8 @@ void main_window_load(Window *window) {
   layer_set_frame(s_timetable_page_container, timetable_frame);
   layer_add_child(s_content_container, s_timetable_page_container);
 
-  // Create scroll layer for timetable (allows scrolling through many stops)
-  GRect scroll_bounds = GRect(0, 28, bounds.size.w, content_bounds.size.h - 28); // Below title
+  // Create scroll layer for timetable (allows scrolling through many stops) - with round screen padding
+  GRect scroll_bounds = GRect(ROUND_PADDING_LARGE, 28, bounds.size.w - (2 * ROUND_PADDING_LARGE), content_bounds.size.h - 28); // Below title
   s_timetable_scroll_layer = scroll_layer_create(scroll_bounds);
   // Make scroll layer background transparent so row backgrounds show
   scroll_layer_set_shadow_hidden(s_timetable_scroll_layer, true);
@@ -183,7 +184,7 @@ void main_window_load(Window *window) {
   // Content layer inside scroll - tall enough for all entries
   int row_height = 26;
   int content_height = MAX_STOPS * row_height; // Just the rows
-  s_timetable_content_layer = layer_create(GRect(0, 0, bounds.size.w, content_height));
+  s_timetable_content_layer = layer_create(GRect(0, 0, bounds.size.w - (2 * ROUND_PADDING_LARGE), content_height));
   scroll_layer_add_child(s_timetable_scroll_layer, s_timetable_content_layer);
 
   // Timetable title (fixed at top, outside scroll)
@@ -200,13 +201,16 @@ void main_window_load(Window *window) {
   int start_y = 0; // Relative to content layer
 
   // Create a single background layer for zebra striping
-  Layer *zebra_bg_layer = layer_create(GRect(0, 0, bounds.size.w, content_height));
+  Layer *zebra_bg_layer = layer_create(GRect(0, 0, bounds.size.w - (2 * ROUND_PADDING_LARGE), content_height));
   layer_set_update_proc(zebra_bg_layer, timetable_row_bg_update_proc);
   layer_add_child(s_timetable_content_layer, zebra_bg_layer);
 
   // Load icon bitmaps for stop types
   s_train_signal_bitmap = gbitmap_create_with_resource(RESOURCE_ID_TRAIN_SIGNAL);
   s_train_station_bitmap = gbitmap_create_with_resource(RESOURCE_ID_TRAIN_STATION);
+
+  // Calculate timetable row width accounting for round screen padding
+  int timetable_row_width = bounds.size.w - (2 * ROUND_PADDING_LARGE);
 
   for (int i = 0; i < MAX_STOPS; i++) {
     // Icon layer for stop type (left of stop name) - full height of row (26px)
@@ -217,7 +221,7 @@ void main_window_load(Window *window) {
 
     // Stop name layer (left side, top line) - shifted right to make room for icon
     s_timetable_stop_layers[i] = text_layer_create(
-      GRect(26, start_y + i * row_height, bounds.size.w - 76, 14));
+      GRect(26, start_y + i * row_height, timetable_row_width - 50, 14));
     text_layer_set_background_color(s_timetable_stop_layers[i], GColorClear);
     text_layer_set_text_color(s_timetable_stop_layers[i], GColorBlack);
     text_layer_set_font(s_timetable_stop_layers[i], fonts_get_system_font(FONT_KEY_GOTHIC_14));
@@ -235,7 +239,7 @@ void main_window_load(Window *window) {
 
     // Delay layer (right side - bigger text for +x/-x)
     s_timetable_delay_layers[i] = text_layer_create(
-      GRect(bounds.size.w - 45, start_y + i * row_height + 6, 40, 18));
+      GRect(timetable_row_width - 45, start_y + i * row_height + 6, 40, 18));
     text_layer_set_background_color(s_timetable_delay_layers[i], GColorClear);
     text_layer_set_font(s_timetable_delay_layers[i], fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
     text_layer_set_text_alignment(s_timetable_delay_layers[i], GTextAlignmentRight);
@@ -243,7 +247,7 @@ void main_window_load(Window *window) {
   }
 
   // Set scroll layer content size
-  scroll_layer_set_content_size(s_timetable_scroll_layer, GSize(bounds.size.w, content_height));
+  scroll_layer_set_content_size(s_timetable_scroll_layer, GSize(bounds.size.w - (2 * ROUND_PADDING_LARGE), content_height));
   
   // ========== LAMP PAGE CONTAINER ==========
   s_lamp_page_container = layer_create(page_bounds);

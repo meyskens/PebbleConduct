@@ -47,16 +47,38 @@ enum {
 
 // Screen size detection for layout optimization
 // Standard Pebble screens: 144x168 (aplite, basalt, diorite)
-// Large screens: 200x228 (emery, flint, gabbro)
-// Round screens: 180x180 (chalk)
-#if PBL_DISPLAY_WIDTH >= 200 && PBL_DISPLAY_HEIGHT >= 228
+// Large screens: 200x228 (emery, flint), 260x260 (gabbro)
+// Round screens: 180x180 (chalk), 260x260 (gabbro)
+#if (PBL_DISPLAY_WIDTH >= 200 && PBL_DISPLAY_HEIGHT >= 228) || (PBL_DISPLAY_WIDTH == 260 && PBL_DISPLAY_HEIGHT == 260)
   #define IS_LARGE_SCREEN 1
 #else
   #define IS_LARGE_SCREEN 0
 #endif
 
-#if PBL_DISPLAY_WIDTH == 180 && PBL_DISPLAY_HEIGHT == 180
+// Round screen detection - both Chalk (180x180) and Gabbro (260x260) are round
+#if (PBL_DISPLAY_WIDTH == 180 && PBL_DISPLAY_HEIGHT == 180) || (PBL_DISPLAY_WIDTH == 260 && PBL_DISPLAY_HEIGHT == 260)
   #define IS_ROUND_SCREEN 1
 #else
   #define IS_ROUND_SCREEN 0
+#endif
+
+// Round screen padding values (for Chalk and Gabbro platforms)
+// These values account for the rounded corners of the display
+// Gabbro (260x260) has more screen real estate but still needs padding for corners
+#if IS_ROUND_SCREEN
+  #if PBL_DISPLAY_WIDTH == 260
+    // Gabbro has larger screen but still needs corner padding
+    #define ROUND_PADDING_LARGE 25   // For timetable and next station sections
+    #define ROUND_PADDING_SMALL 15   // For current station
+    #define ROUND_PADDING_DEFAULT 20 // General padding
+  #else
+    // Chalk (180x180) - original values
+    #define ROUND_PADDING_LARGE 20   // For timetable and next station sections
+    #define ROUND_PADDING_SMALL 10   // For current station
+    #define ROUND_PADDING_DEFAULT 15 // General padding
+  #endif
+#else
+  #define ROUND_PADDING_LARGE 0
+  #define ROUND_PADDING_SMALL 0
+  #define ROUND_PADDING_DEFAULT 0
 #endif
