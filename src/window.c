@@ -200,8 +200,8 @@ void main_window_load(Window *window) {
   // Timetable stop entries - inside scrollable content layer
   int start_y = 0; // Relative to content layer
 
-  // Create a single background layer for zebra striping
-  Layer *zebra_bg_layer = layer_create(GRect(0, 0, bounds.size.w - (2 * ROUND_PADDING_LARGE), content_height));
+  // Create a single background layer for zebra striping - full width on round screens (stripes go edge to edge)
+  Layer *zebra_bg_layer = layer_create(GRect(0, 0, bounds.size.w, content_height));
   layer_set_update_proc(zebra_bg_layer, timetable_row_bg_update_proc);
   layer_add_child(s_timetable_content_layer, zebra_bg_layer);
 
