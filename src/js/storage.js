@@ -31,6 +31,11 @@ function loadSettings() {
     } catch (e) {
       console.log('Error loading settings: ' + e);
     }
+  } else {
+    // No saved settings - apply defaults to trainData
+    var defaultTrainNumber = parseInt(state.appSettings.trainNumber);
+    state.trainData.trainNumber = (!isNaN(defaultTrainNumber)) ? defaultTrainNumber : 0;
+    console.log('Using default settings: ' + JSON.stringify(state.appSettings));
   }
 
   var savedPath = localStorage.getItem(STORAGE_KEYS.TRAIN_PATH);

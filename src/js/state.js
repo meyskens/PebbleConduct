@@ -17,11 +17,11 @@ var storedTrainPath = {
   locations: []
 };
 
-// Settings
+// Settings - defaults must match Clay configuration defaults
 var appSettings = {
-  dataSource: 'tcs',
-  trainNumber: '',
-  commercialTrainNumber: '',
+  dataSource: 'whereisthees',
+  trainNumber: '452',
+  commercialTrainNumber: 'ES452',
   date: '',
   tcsUrl: '',
   tcsUsername: '',
