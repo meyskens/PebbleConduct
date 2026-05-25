@@ -13,7 +13,7 @@
   },
   "license": "EUPL-1.2",
   "dependencies": {
-    "pebble-clay": "^1.0.4"
+    "@rebble/clay": "^1.0.10"
   },
   "devDependencies": {
     "sharp": "^0.34.5"

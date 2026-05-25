@@ -8,7 +8,7 @@ default:
 build:
     pebble build
 
-# Build for a specific platform (aplite, basalt, chalk, diorite, emery)
+# Build for a specific platform (aplite, basalt, chalk, diorite, emery, gabbro)
 build-platform platform:
     pebble build --platform {{platform}}
 
