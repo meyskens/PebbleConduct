@@ -41,13 +41,54 @@ void main_window_load(Window *window) {
   // Get bounds relative to content container
   GRect page_bounds = layer_get_bounds(s_content_container);
   
+  // Layout values based on screen size
+  // Large screens (emery/flint/gabbro): 200x228
+  // Standard screens: 144x168
+  #if IS_LARGE_SCREEN
+    // Large screen layout values
+    const int time_layer_height = 36;
+    const int progress_bar_y = 40;
+    const int train_info_bg_y = 46;
+    const int train_icon_y = 56;
+    const int train_number_y = 48;
+    const int station_y = 76;
+    const int status_y = 102;
+    const int status_height = 48;
+    const int next_station_bg_y = 154;
+    const int next_station_y = 162;
+    const int next_commercial_y = 186;
+    const int next_section_height = 74;
+    const GFont train_number_font = fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD);
+    const GFont station_font = fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD);
+    const GFont status_font = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
+    const GFont next_station_font = fonts_get_system_font(FONT_KEY_GOTHIC_18);
+  #else
+    // Standard screen layout values
+    const int time_layer_height = 28;
+    const int progress_bar_y = 32;
+    const int train_info_bg_y = 36;
+    const int train_icon_y = 46;
+    const int train_number_y = 38;
+    const int station_y = 62;
+    const int status_y = 84;
+    const int status_height = 40;
+    const int next_station_bg_y = 110;
+    const int next_station_y = 120;
+    const int next_commercial_y = 138;
+    const int next_section_height = 74;
+    const GFont train_number_font = fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD);
+    const GFont station_font = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
+    const GFont status_font = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
+    const GFont next_station_font = fonts_get_system_font(FONT_KEY_GOTHIC_14);
+  #endif
+  
   // ========== MAIN PAGE CONTAINER ==========
   s_main_page_container = layer_create(page_bounds);
   layer_add_child(s_content_container, s_main_page_container);
   
-  // Time layer (top) - compact height
+  // Time layer (top)
   s_time_layer = text_layer_create(
-    GRect(0, 0, bounds.size.w, 28));
+    GRect(0, 0, bounds.size.w, time_layer_height));
   text_layer_set_background_color(s_time_layer, GColorClear);
   text_layer_set_text_color(s_time_layer, GColorBlack);
   text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_LECO_28_LIGHT_NUMBERS));
@@ -56,70 +97,70 @@ void main_window_load(Window *window) {
   
   // Departure countdown progress bar (between clock and station info)
   departure_progress_init();
-  layer_set_frame(s_departure_progress_layer, GRect(0, 32, bounds.size.w, 4));
+  layer_set_frame(s_departure_progress_layer, GRect(0, progress_bar_y, bounds.size.w, 4));
   layer_add_child(s_main_page_container, s_departure_progress_layer);
   
   // Light blue background layer for train info section - starts after progress bar
   s_train_info_bg_layer = layer_create(
-    GRect(0, 36, bounds.size.w, content_bounds.size.h - 36));
+    GRect(0, train_info_bg_y, bounds.size.w, content_bounds.size.h - train_info_bg_y));
   layer_set_update_proc(s_train_info_bg_layer, train_info_bg_update_proc);
   layer_add_child(s_main_page_container, s_train_info_bg_layer);
   
   // Train icon bitmap layer (in front of train number) - vertically centered with text
   s_train_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_TRAIN_ICON);
-  s_train_icon_layer = bitmap_layer_create(GRect(5, 46, 18, 18));
+  s_train_icon_layer = bitmap_layer_create(GRect(5, train_icon_y, 18, 18));
   bitmap_layer_set_bitmap(s_train_icon_layer, s_train_icon_bitmap);
   bitmap_layer_set_compositing_mode(s_train_icon_layer, GCompOpSet);
   layer_add_child(s_main_page_container, bitmap_layer_get_layer(s_train_icon_layer));
 
   // Commercial train number layer - shifted right to make room for icon
   s_train_number_layer = text_layer_create(
-    GRect(26, 38, bounds.size.w - 31, 26));
+    GRect(26, train_number_y, bounds.size.w - 31, IS_LARGE_SCREEN ? 32 : 26));
   text_layer_set_background_color(s_train_number_layer, GColorClear);
   text_layer_set_text_color(s_train_number_layer, GColorBlack);
-  text_layer_set_font(s_train_number_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
+  text_layer_set_font(s_train_number_layer, train_number_font);
   text_layer_set_text_alignment(s_train_number_layer, GTextAlignmentLeft);
   layer_add_child(s_main_page_container, text_layer_get_layer(s_train_number_layer));
   
   // Current station layer
   s_station_layer = text_layer_create(
-    GRect(5, 62, bounds.size.w - 10, 24));
+    GRect(5, station_y, bounds.size.w - 10, IS_LARGE_SCREEN ? 28 : 24));
   text_layer_set_background_color(s_station_layer, GColorClear);
   text_layer_set_text_color(s_station_layer, GColorBlack);
-  text_layer_set_font(s_station_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
+  text_layer_set_font(s_station_layer, station_font);
   text_layer_set_text_alignment(s_station_layer, GTextAlignmentLeft);
   layer_add_child(s_main_page_container, text_layer_get_layer(s_station_layer));
   
   // Status layer (shows arrival/departure times + delays, can be 2 lines)
   s_status_layer = text_layer_create(
-    GRect(5, 84, bounds.size.w - 10, 40));
+    GRect(5, status_y, bounds.size.w - 10, status_height));
   text_layer_set_background_color(s_status_layer, GColorClear);
   text_layer_set_text_color(s_status_layer, GColorOxfordBlue);
-  text_layer_set_font(s_status_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
+  text_layer_set_font(s_status_layer, status_font);
   text_layer_set_text_alignment(s_status_layer, GTextAlignmentLeft);
   layer_add_child(s_main_page_container, text_layer_get_layer(s_status_layer));
   
   // Full-width background for next station section (starts above station name)
   s_next_station_bg_layer = layer_create(
-    GRect(0, 110, bounds.size.w, 74));
+    GRect(0, next_station_bg_y, bounds.size.w, next_section_height));
   layer_set_update_proc(s_next_station_bg_layer, next_station_bg_update_proc);
   layer_add_child(s_main_page_container, s_next_station_bg_layer);
 
   // Next station layer (single line, black with transparent background)
   s_next_station_layer = text_layer_create(
-    GRect(5, 120, bounds.size.w - 10, 18));
+    GRect(5, next_station_y, bounds.size.w - 10, IS_LARGE_SCREEN ? 24 : 18));
   text_layer_set_background_color(s_next_station_layer, GColorClear);
   text_layer_set_text_color(s_next_station_layer, GColorBlack);
-  text_layer_set_font(s_next_station_layer, fonts_get_system_font(FONT_KEY_GOTHIC_14));
+  text_layer_set_font(s_next_station_layer, next_station_font);
   text_layer_set_text_alignment(s_next_station_layer, GTextAlignmentLeft);
   layer_add_child(s_main_page_container, text_layer_get_layer(s_next_station_layer));
 
   // Next commercial stop layer (shows arrival/departure times for next commercial stop)
   s_next_commercial_stop_layer = text_layer_create(
-    GRect(5, 138, bounds.size.w - 10, 16));
+    GRect(5, next_commercial_y, bounds.size.w - 10, IS_LARGE_SCREEN ? 24 : 16));
   text_layer_set_background_color(s_next_commercial_stop_layer, GColorClear);
   text_layer_set_text_color(s_next_commercial_stop_layer, GColorBlack);
-  text_layer_set_font(s_next_commercial_stop_layer, fonts_get_system_font(FONT_KEY_GOTHIC_14));
+  text_layer_set_font(s_next_commercial_stop_layer, next_station_font);
   text_layer_set_text_alignment(s_next_commercial_stop_layer, GTextAlignmentLeft);
   layer_add_child(s_main_page_container, text_layer_get_layer(s_next_commercial_stop_layer));
   

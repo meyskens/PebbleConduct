@@ -44,3 +44,19 @@ enum {
 
 // Sentinel value for "no delay information" (null from API)
 #define DELAY_NO_INFO -999
+
+// Screen size detection for layout optimization
+// Standard Pebble screens: 144x168 (aplite, basalt, diorite)
+// Large screens: 200x228 (emery, flint, gabbro)
+// Round screens: 180x180 (chalk)
+#if PBL_DISPLAY_WIDTH >= 200 && PBL_DISPLAY_HEIGHT >= 228
+  #define IS_LARGE_SCREEN 1
+#else
+  #define IS_LARGE_SCREEN 0
+#endif
+
+#if PBL_DISPLAY_WIDTH == 180 && PBL_DISPLAY_HEIGHT == 180
+  #define IS_ROUND_SCREEN 1
+#else
+  #define IS_ROUND_SCREEN 0
+#endif
