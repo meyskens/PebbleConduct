@@ -236,6 +236,7 @@ func findCurrentStation(currentMinutes int) CurrentStation {
 	}
 
 	// Find the station we're currently at or just passed
+	// Consider both arrival and departure times to account for dwell time at stations
 	var currentIdx = -1
 	var currentLoc Location
 
@@ -244,22 +245,38 @@ func findCurrentStation(currentMinutes int) CurrentStation {
 		depMinutes := timeToMinutes(loc.Departure)
 		arrMinutes := timeToMinutes(loc.Arrival)
 
+		// Determine the "end time" for this station (when we leave it)
 		// Use departure time if available, otherwise arrival time
-		checkTime := depMinutes
-		if checkTime < 0 {
-			checkTime = arrMinutes
+		endTime := depMinutes
+		if endTime < 0 {
+			endTime = arrMinutes
 		}
 
-		if checkTime < 0 {
+		// Determine the "start time" for this station (when we arrive at it)
+		// Use arrival time if available, otherwise departure time
+		startTime := arrMinutes
+		if startTime < 0 {
+			startTime = depMinutes
+		}
+
+		if endTime < 0 {
 			continue
 		}
 
-		// If we've passed this station's time, update current
-		if currentMinutes >= checkTime {
+		// Check if we're currently at this station or have passed it
+		// We're at this station if current time is between arrival and departure
+		// We've passed this station if current time >= departure time
+		if currentMinutes >= endTime {
+			// We've passed this station
 			currentIdx = i
 			currentLoc = loc
+		} else if startTime >= 0 && currentMinutes >= startTime && currentMinutes < endTime {
+			// We're currently at this station (between arrival and departure)
+			currentIdx = i
+			currentLoc = loc
+			break
 		} else {
-			// We've gone past the current time, stop here
+			// We haven't reached this station yet
 			break
 		}
 	}
