@@ -64,14 +64,14 @@ void main_window_load(Window *window) {
     const GFont status_font = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
     const GFont next_station_font = fonts_get_system_font(FONT_KEY_GOTHIC_18);
   #else
-    // Standard screen layout values
+    // Small screen layout values (144x168)
     const int time_layer_height = 28;
     const int progress_bar_y = 32;
     const int train_info_bg_y = 36;
     const int train_icon_y = 46;
     const int train_number_y = 38;
     const int station_y = 62;
-    const int status_y = 84;
+    const int status_y = 78;
     const int status_height = 40;
     const int next_station_bg_y = 110;
     const int next_station_y = 120;
