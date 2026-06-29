@@ -3,7 +3,7 @@
   "shortName": "PebbleConduct",
   "longName": "PebbleConduct - Pebble App For Train Conductors",
   "companyName": "Maartje Eyskens",
-  "versionLabel": "1.0.4",
+  "versionLabel": "1.0.5",
   "sdkVersion": "3",
   "targetPlatforms": ["aplite", "basalt", "chalk", "diorite", "emery", "flint", "gabbro"],
   "watchapp": {
