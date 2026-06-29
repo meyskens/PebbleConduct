@@ -61,7 +61,7 @@ function setupWebviewClosedHandler() {
 
         // Update app settings - extract .value from Clay objects
         ['dataSource', 'trainNumber', 'commercialTrainNumber', 'date', 'tcsUrl',
-         'tcsUsername', 'tcsPassword', 'dbClientId', 'dbApiKey', 'nsSubscriptionKey', 'updateInterval'
+         'tcsAuthMethod', 'tcsUsername', 'tcsPassword', 'tcsAspNetCookieC1', 'tcsAspNetCookieC2', 'dbClientId', 'dbApiKey', 'nsSubscriptionKey', 'updateInterval'
         ].forEach(function(key) {
           if (settings[key] !== undefined) state.appSettings[key] = getValue(settings[key]);
         });

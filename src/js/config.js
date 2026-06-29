@@ -73,6 +73,16 @@ module.exports = [
         "defaultValue": ""
       },
       {
+        "type": "select",
+        "messageKey": "tcsAuthMethod",
+        "label": "Authentication Method",
+        "defaultValue": "credentials",
+        "options": [
+          { "label": "Username & Password", "value": "credentials" },
+          { "label": "ASP.NET Cookie", "value": "aspCookie" }
+        ]
+      },
+      {
         "type": "input",
         "messageKey": "tcsUsername",
         "label": "Username",
@@ -86,6 +96,18 @@ module.exports = [
         "attributes": {
           "type": "password"
         }
+      },
+      {
+        "type": "input",
+        "messageKey": "tcsAspNetCookieC1",
+        "label": "ASP.NET Cookie C1",
+        "defaultValue": ""
+      },
+      {
+        "type": "input",
+        "messageKey": "tcsAspNetCookieC2",
+        "label": "ASP.NET Cookie C2",
+        "defaultValue": ""
       }
     ]
   },

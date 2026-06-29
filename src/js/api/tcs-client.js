@@ -51,29 +51,54 @@ function fetchFromTCS() {
   request.setRequestHeader('Content-Type', 'application/json');
   request.setRequestHeader('Accept', 'application/json');
 
-  // Validate credentials before sending
-  if (!state.appSettings.tcsUsername || !state.appSettings.tcsPassword) {
-    console.log('TCS credentials not configured');
-    return;
+  // Build payload based on authentication method
+  var authMethod = state.appSettings.tcsAuthMethod || 'credentials';
+  var payload;
+
+  if (authMethod === 'aspCookie') {
+    // ASP.NET cookie authentication
+    if (!state.appSettings.tcsAspNetCookieC1 || !state.appSettings.tcsAspNetCookieC2) {
+      console.log('TCS ASP.NET cookie not configured');
+      return;
+    }
+
+    var cookieC1 = state.appSettings.tcsAspNetCookieC1;
+    if (typeof cookieC1 === 'object' && cookieC1 !== null && cookieC1.value) {
+      cookieC1 = cookieC1.value;
+    }
+    var cookieC2 = state.appSettings.tcsAspNetCookieC2;
+    if (typeof cookieC2 === 'object' && cookieC2 !== null && cookieC2.value) {
+      cookieC2 = cookieC2.value;
+    }
+
+    payload = JSON.stringify({
+      aspNetApplicationCookieC1: cookieC1,
+      aspNetApplicationCookieC2: cookieC2
+    });
+    console.log('Sending TCS request with ASP.NET cookie auth to: ' + url);
+  } else {
+    // Username & password authentication
+    if (!state.appSettings.tcsUsername || !state.appSettings.tcsPassword) {
+      console.log('TCS credentials not configured');
+      return;
+    }
+
+    // Ensure password is a string (not an object from Clay)
+    var password = state.appSettings.tcsPassword;
+    if (typeof password === 'object' && password !== null && password.value) {
+      password = password.value;
+      console.log('Extracted password from object wrapper');
+    }
+
+    payload = JSON.stringify({
+      username: state.appSettings.tcsUsername,
+      password: password
+    });
+    console.log('Sending TCS request to: ' + url);
+    console.log('Username: ' + state.appSettings.tcsUsername);
+    // Security: do not log password details
   }
 
-  // Ensure password is a string (not an object from Clay)
-  var password = state.appSettings.tcsPassword;
-  if (typeof password === 'object' && password !== null && password.value) {
-    password = password.value;
-    console.log('Extracted password from object wrapper');
-  }
-
-  // Use stored credentials
-  var credentials = {
-    username: state.appSettings.tcsUsername,
-    password: password
-  };
-
-  var payload = JSON.stringify(credentials);
-  console.log('Sending TCS request to: ' + url);
-  console.log('Username: ' + state.appSettings.tcsUsername);
-  // Security: do not log password details
   request.send(payload);
 }
 

@@ -16,7 +16,7 @@ function loadSettings() {
       var settings = JSON.parse(savedSettings);
 
       ['dataSource', 'trainNumber', 'commercialTrainNumber', 'date',
-       'tcsUrl', 'tcsUsername', 'tcsPassword', 'dbClientId', 'dbApiKey', 'nsSubscriptionKey']
+       'tcsUrl', 'tcsAuthMethod', 'tcsUsername', 'tcsPassword', 'tcsAspNetCookieC1', 'tcsAspNetCookieC2', 'dbClientId', 'dbApiKey', 'nsSubscriptionKey']
         .forEach(function(key) {
           if (settings[key]) state.appSettings[key] = getValue(settings[key]);
         });
